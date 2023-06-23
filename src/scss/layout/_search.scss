@@ -1,0 +1,27 @@
+@use './../utils' as *;
+
+.search {
+  width: 80%;
+  margin: 50px auto 0;
+}
+
+.search__form {
+  border-bottom: 1px solid $white;
+}
+
+.search__inputGroup {
+  flex-grow: 1;
+}
+
+.search__formGroup {
+  width: 100%;
+  display: flex;
+
+}
+
+.search__input {
+  background: transparent;
+  color: $gray7;
+  border: none;
+  padding: 10px 0;
+}
