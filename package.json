@@ -17,5 +17,12 @@
     "postcss-combine-media-query": "^1.0.1",
     "rimraf": "^5.0.1",
     "sass": "^1.63.4"
-  }
+  },
+  "name": "project9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
