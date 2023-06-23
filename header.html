@@ -20,5 +20,37 @@
     <link rel="stylesheet" href="./src/style/index.css" />
     <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <hl class="logo">
+        <a href="/" class="logo__link" aria-label="TAING"></a>
+      </hl>
+      <!-- //logo -->
+      <nav class="menu">
+        <h2 class="a11yHidden">메인 메뉴</h2>
+        <ul class="menu__list">
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><span class="icon"></span>실시간</a></li>
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1">TV프로그램</a></li>
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1">영화</a></li>
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><span class="icon"></span><span class="a11yHidden">Paramount</span></a></li>
+        </ul>
+      </nav>
+      <!-- //navigation -->
+      <form action="https://formspree.io/seulbinim@gmail.com" method="POST" class="searchForm">
+        <fieldset>
+          <legend>검색</legend>
+          <div class="searchForm__group">
+            <div class="formInput">
+              <label for="search" class="a11yHidden formInput__label">검색어</label>
+              <input id="search" class="formInput__input" type="search" required="" placeholder="검색어를 입력하세요." name="search">
+            </div>
+            <button type="submit" class="button button--primary button--fill">검색</button>
+          </div>
+        </fieldset>
+      </form>
+      <!-- //searchForm : 누르면 검색창 페이지로 이동 -->
+      <div class="userInfo"></div>
+      <!-- //userInfo -->
+    </header>
+  </body>
 </html>
