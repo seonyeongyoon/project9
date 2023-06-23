@@ -1,1 +1,49 @@
 @use './../utils' as *;
+
+.footer {
+  @include flexbox($direction: column);
+  gap: rem(24px);
+  padding: rem(140px) rem(68px) rem(170px);
+  font-size: rem(22px);
+
+
+  &__list {
+    @include flexbox();
+    gap: rem(36px);
+    color: $gray2;
+  }
+
+  &__content {
+    color: $gray5;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__sns {
+    @include flexbox();
+    gap: rem(20px);
+
+    &__item {
+      flex-shrink: 0;
+    }
+
+    &__link {
+      @include flexbox($justify: center, $items: center);
+      width: rem(52px);
+      height: rem(52px);
+      border-radius: 50%;
+      background-color: $gray8;
+      padding: rem(12px);
+    }
+  }
+
+  .copyright {
+    color: $gray5;
+   }
+
+  .sprite {
+    background-position: 0 -50px;
+  }
+
+}

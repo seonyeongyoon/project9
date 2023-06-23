@@ -1,1 +1,11 @@
 @use './../utils' as *;
+
+main {
+  
+}
+
+.section1 {
+  width: 100%;
+  height: 100vh;
+  background: #000 url(/src/image/landing/backgorund-1.png) no-repeat center / cover;
+}
