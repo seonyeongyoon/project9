@@ -1,6 +1,23 @@
-//  기본 색상 --------------------------------------------------------- /
-$white: #ffffff;
-$black: #101010;
+// 기본 색상
+$white: #fff;
+$black: #000;
+$black2: #030303;
+$red_landing: #E93945;
+$red_login: #FF153C;
+$red_hover: #CC1030;
+$red: #C73E4E;
+$gray1: #E1E1E1;
+$gray2: #C4C4C4;
+$gray3: #A6A6A6;
+$gray4: #898989;
+$gray5: #6B6B6B;
+$gray6: #565656;
+$gray7: #404040;
+$gray8: #2B2B2B;
+$gray9: #151515;
+$dark-bg1 : #191919;
+$dark-bg2: #212121;
+
 $dark-brown: #38302e;
 $brown: #988574;
 $light-brown: #c7b39a;
@@ -10,21 +27,18 @@ $yellow: #e8ca58;
 $khaki: #f0e68c;
 $orange: #eea60a;
 $blue: #6aaee6;
-$gray: #767676;
 $silver: #999;
 
 // 콘텐츠 별 색상 변수
-$base-bg: $white; // body 기본 배경 색상
-$base-text: $black; // body 기본 글자 색상
+$main-bg-color: $black;
+$section-title-text: $white;
+$title-text: $gray2;
+$subtitle-text: $gray3;
+$join-text: $gray4;
+$third-text: $gray5;
+$input-text: $gray6;
+$search-text: $gray7;
+$Quick-vod: $red;
 
-$primary-color: $dark-brown;
-$secondary-color: $brown;
-$accent-color: $light-yellow;
-$accent-opacity-color: rgba($khaki, 0.85);
-$accent-book: $green; // 추천서적
-$accent-news: $yellow; // 새소식
-$accent-board: $brown; // 게시판
-$accent-favorite: $orange; // 인기사이트
-$accent-twitter: $blue; // 트위터
 $shadow-color: $black; // 그림자 색상
 $border-color: $gray; // border 색상

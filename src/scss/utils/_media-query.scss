@@ -2,11 +2,13 @@
 
 // Breakpoints
 $breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
+  s: 320px,
+  m: 768px,
+  l: 1280px,
+  xl: 1920px,
+  //모바일 320~767
+  //태블릿 768~1279
+  //데스크탑 1280~1920
 );
 
 @function errorMessage($breakpoint-name) {
@@ -57,31 +59,48 @@ $breakpoints: (
 }
 
 // 미디어 쿼리 중단점 (Breakpoints) --------------------------------------------------------------- /
-$break: 768px;
+$max_mobile: 768px;
+$max_tablet: 1280px;
+$max_desktop: 1920px;
+  //모바일 320~767
+  //태블릿 768~1279
+  //데스크탑 1280~1920
 
 @mixin mobile {
-  @media (max-width: #{$break - 1}) {
+  @media (max-width: #{$max_mobile - 1}) {
     @content;
   }
 }
+
+@mixin tablet {
+  @media (min-width: #{$max_mobile}) and (max-width: ($max_tablet - 1)) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (min-width: #{$break}) {
+  @media (min-width: #{$max_tablet}) and (max-width: ($max_desktop)) {
     @content;
   }
 }
 
 @mixin media($media) {
   @if $media == "mobile" {
-    @media (max-width: ($break - 1)) {
+    @media (max-width: #{$max_mobile - 1}) {
+      @content;
+    }
+  }
+  @if $media == "tablet" {
+    @media (min-width: #{$max_mobile}) and (max-width: ($max_tablet - 1)) {
       @content;
     }
   }
   @if $media == "desktop" {
-    @media (min-width: $break) {
+    @media (min-width: #{$max_tablet}) and (max-width: ($max_desktop)) {
       @content;
     }
   }
-  @if $media != "mobile" and $media != "desktop" {
+  @if $media != "mobile" and $media != "tablet" and $media != "desktop" {
     @error '미디어 유형이 유효하지 않습니다.';
   }
 }
