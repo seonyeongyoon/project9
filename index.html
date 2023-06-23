@@ -1,26 +1,142 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TAING - 메인</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
-    <link rel="stylesheet" href="./src/style/index.css" />
-    <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
-  </head>
-  <body>
-    111111
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAING - 메인</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="./src/style/index.css" />
+  <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <main>
+    <section class="section-1">
+      <h1 class="a11yHidden">메인배너</h1>
+      <div class="slider">
+        <div id="sliderImage" class="slide-img">
+          <!-- 이미지는 그라데이션을 주기위해서 배경 이미지로 javascript 에서 삽입 -->
+        </div>
+        <button class="prev">
+          <i class="fa-solid fa-chevron-left fa-xl" style="color: #c3c6d1;"></i>
+        </button>
+        <button class="next">
+          <i class="fa-solid fa-chevron-right fa-xl" style="color: #c3c6d1;"></i>
+        </button>
+        <a href="#" class="details">자세히보기</a>
+        <div class="dot-container">
+          <p class="section-text"></p> <!-- js로 각 슬라이드 텍스트 입력-->
+          <button class="toggle-button-container">
+            <i id="toggle-start" class="fa-solid fa-pause pause" style="color: #ffffff;"></i>
+          </button>
+          <button class="dot"></button> <!-- css에서 구현-->
+          <button class="dot"></button>
+          <button class="dot"></button>
+          <button class="dot"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-2">
+      <h1 class="a11yHidden">추천 영상</h1>
+      <div class="img-container">
+        <h3>티빙에서 꼭 봐야하는 콘텐츠</h3>
+        <div class="img-flexbox">
+          <figure>
+            <img src="./src/image/main/desktop/img_frame.png" alt="" />
+            <figcaption>보물찾기</figcaption>
+          </figure>
+          <figure>
+            <img src="./src/image/main/desktop/img_frame-1.png" alt="" />
+            <figcaption>러브캐처 인 발리</figcaption>
+          </figure>
+          <figure>
+            <img src="./src/image/main/desktop/img_frame-2.png" alt="" />
+            <figcaption>술꾼도시여자들</figcaption>
+          </figure>
+          <figure>
+            <img src="./src/image/main/desktop/img_frame-3.png" alt="" />
+            <figcaption>털사킹</figcaption>
+          </figure>
+          <figure>
+            <img src="./src/image/main/desktop/img_frame-4.png" alt="" />
+            <figcaption>보물찾기</figcaption>
+          </figure>
+          <figure>
+            <img src="./src/image/main/desktop/img_frame-5.png" alt="" />
+            <figcaption>보물찾기</figcaption>
+          </figure>
+          <figure>
+            <img src="./src/image/main/desktop/img_frame-6.png" alt="" />
+            <figcaption>보물찾기</figcaption>
+          </figure>
+          <figure>
+            <img src="./src/image/main/desktop/img_frame-7.png" alt="" />
+            <figcaption>보물찾기</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="img-container">
+        <h3></h3>
+        <div class="img-flexbox">
+          <figure class="vod-box">
+            <img src="" alt="" />
+            <figcaption>1<span>2</span></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="img-container">
+        <h3></h3>
+        <div class="img-flexbox">
+          <div class="favorite-box"> <!--relative--> 
+            <img src="" alt="" />
+            <!-- p 태그  absolution-->
+            <p><span><!--기울기 및 크기조정--></span></p>
+          </div>
+        </div>
+      </div>
+      <div class="img-container">
+        <h3></h3>
+        <div class="img-flexbox">
+          <div class="live-box">
+            <img src="" alt="" />
+            <div class="title-box"> <!--flex로 주기-->
+              <h4><i></i></h4> 
+              <div class="text-box">
+                <h5></h5>
+                <h6></h6>
+                <span></span>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <div class="img-container">
+        <h3></h3>
+        <div class="img-flexbox">
+          <img src="" alt="" />
+        </div>
+      </div>
+      <div class="bottom-banner">
+        <img src="" alt="" />
+      </div>
+      <div class="event-box">
+        <h3></h3>
+        <div class="img-flexbox">
+          <div class="event-img-box">
+            <img src="" alt="" />
+          </div>  <!-- 마진으로 좌우 공백-->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://kit.fontawesome.com/4675147455.js" crossorigin="anonymous"></script>
+  <script src="./src/js/layout.js"></script>
+
 </html>
