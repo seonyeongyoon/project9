@@ -7,79 +7,78 @@ section {
 .profile {
   width: 70%;
   margin: 50px auto 100px;
+  
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  &__word {
+    color: $gray2;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  &__img {
+    width: 150px;
+  }
+  
+  &__lists {
+    @include flexbox($justify: center);
+    column-gap: 30px;
+  }
+
+  &__link {
+    color: $gray3;
+    @include flexbox($direction: column, $items: center);
+    row-gap: 15px;
+  }
+  
+  
+  &__img__div {
+    position: relative;
+  }
+  
+  &__dimmed {
+    @include pos(absolute, 0, 0, 0, 0);
+    background: rgba(0, 0, 0, .5);
+    border-radius: 4px;
+  }
+  
+  &__dimmed__img {
+    width: 100%;
+    max-width: 50px;
+    @include pos(absolute, calc(50% - 25px), 0, 0, calc(50% - 25px));
+  }
+  
+  &__selected {
+    display: none;
+  }
+
+  &__button {
+    display: block;
+    width: 180px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 35px;
+    @include paddingY(20px);
+    @include autoMargin;
+  }
+  
+  &__button__complete {
+    color: $black;
+    background-color: $gray1;
+    border: none;
+  }
+
+  &__button__edit {
+    color: $gray3;
+    background-color: transparent;
+    border: 1px solid $gray6;
+  }
 }
 
-.profile__title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
 
-.profile__word {
-  text-align: center;
-  color: $gray2;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
 
-.profile__img {
-  width: 150px;
-}
-
-.profile__lists {
-  display: flex;
-  justify-content: center;
-  column-gap: 30px;
-}
-
-.profile__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: $gray3;
-  row-gap: 15px;
-}
-
-.profile__button {
-  width: 200px;
-  color: $black;
-  background-color: $gray1;
-  padding: 20px 0;
-  border: none;
-  margin: 35px auto;
-  display: block;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.button__edit {
-  background-color: transparent;
-  border: 1px solid $gray6;
-  color: $gray3;
-}
-
-.profile__img__div {
-  position: relative;
-}
-
-.profile__dimmed {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, .5);
-  border-radius: 4px;
-}
-
-.profile__dimmed__img {
-  position: absolute;
-  width: 100%;
-  max-width: 50px;
-  top: calc(50% - 25px);
-  left: calc(50% - 25px);
-}
-
-.profile_select {
-  display: none;
-}
