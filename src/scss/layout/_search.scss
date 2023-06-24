@@ -1,41 +1,10 @@
 @use './../utils' as *;
 
-.search {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.search__form {
-  border-bottom: 1px solid $white;
-  margin: 50px auto;
-}
-
-.search__inputGroup {
-  flex-grow: 1;
-  background: url(./../../image/search/Search.png) no-repeat;
-}
-
-.search__formGroup {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration{
-	-webkit-appearance: none;
-}
-
-.search__input {
-  background: transparent;
-  color: $gray7;
-  outline: none;
-  border: none;
-  padding: 15px 0;
-  font-size: 2rem;
-  width: 100%;
+  -webkit-appearance: none;
 }
 
 input[type=search]::-webkit-search-cancel-button {
@@ -45,54 +14,85 @@ input[type=search]::-webkit-search-cancel-button {
   background: url(./../image/search/Device=Desktop\,\ Type=No_Filled.png) no-repeat right;
 }
 
-.search__button {
-  align-items: center;
-  border: 0;
-  width: 50px;
-  height: 50px;
-  background: center url(./../image/search/Search.png);
-  cursor: pointer;
+.search {
+  width: 80%;
+  @include autoMargin($marginX: auto);
+  
+  &__form {
+    border-bottom: 1px solid $white;
+    @include marginY($marginY: 50px);
+    @include autoMargin;
+  }
+
+  &__formGroup {
+    width: 100%;
+    @include flexbox($items: center);
+  }
+
+  &__inputGroup {
+    flex-grow: 1;
+    background: url(./../../image/search/Search.png) no-repeat;
+  }
+
+  &__input {
+    width: 100%;
+    color: $gray7;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    @include paddingY(15px);
+  }
+
+  &__button {
+    border: 0;
+    width: 50px;
+    height: 50px;
+    background: url(./../image/search/Search.png);
+    cursor: pointer;
+  }
+
+  &__listGroup {
+    @include flexbox;
+  }
+
+  &__recent, &__realtime {
+    width: 50%;
+  }
+
+  &__title {
+    color: $gray2;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  &__history {
+    color: $gray3;
+    font-size: 1.2rem;
+  }
+
+  &__lists {
+    color: $gray3;
+    font-size: 1.2rem;
+  }
+  
+  &__list {
+    padding-bottom: 25px;
+  }
+  
+  &__time {
+    color: $gray5;
+    font-size: 1.2rem;
+  }
+  
+  &__rank {
+    width: 30px;
+    display: inline-block;
+    color: $red_login;
+  }
 }
 
-.search__division {
-  display: flex;
-}
 
-.search__recent {
-  width: 50%;
-}
 
-.search__realtime {
-  width: 50%;
-}
 
-.search__title {
-  color: $gray2;
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
 
-.search__history {
-  color: $gray3;
-  font-size: 1.2rem;
-}
-
-.search__lists {
-  color: $gray3;
-  font-size: 1.2rem;
-}
-
-.search__list {
-  padding-bottom: 25px;
-}
-
-.search__time {
-  color: $gray5;
-  font-size: 1.2rem;
-}
-
-.search__rank {
-  width: 30px;
-  display: inline-block;
-  color: $red_login;
-}
