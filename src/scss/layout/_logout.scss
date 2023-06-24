@@ -34,7 +34,6 @@
 
   &__vertical {
     color: $gray7;
-    position: absolute;
-    top: 20px;
+    @include pos($t: 20px);
   }
 }
