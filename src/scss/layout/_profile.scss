@@ -78,6 +78,29 @@ section {
     background-color: transparent;
     border: 1px solid $gray6;
   }
+
+  @include tablet {
+    width: 90%;
+  }
+  
+  @include mobile {
+    width: 45%;
+    min-width: 300px;
+
+    &__word {
+      margin-bottom: 40px;
+    }
+
+    &__lists {
+      flex-wrap: wrap;
+      column-gap: 20px;
+    }
+
+    &__list {
+      width: 45%;
+      padding-bottom: 30px;
+    }
+  }
 }
 
 
