@@ -4,7 +4,7 @@
   width: 100%;
   @include flexbox($justify: center, $items: center);
   @include pos($pos:fixed, $t:0, $b:0);
-
+  
   &__content {
     width: 50%;
     max-width: 400px;
@@ -14,7 +14,7 @@
     @include paddingY(30px);
     text-align: center;
   }
-
+  
   &__links {
     position: relative;
   }
@@ -27,13 +27,20 @@
     color: $gray3;
     cursor:pointer;
   }
-
+  
   &__yes {
     font-weight: 700;
   }
-
+  
   &__vertical {
     color: $gray7;
     @include pos($t: 20px);
+  }
+
+  @include mobile {
+    &__content {
+      width: 90%;
+      min-width: 250px;
+    }
   }
 }
