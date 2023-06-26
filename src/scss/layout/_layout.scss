@@ -112,19 +112,170 @@ body{
   background-color: white;
 }
 
+// section 1 파트 끝
+
+
+// section 2 파트 시작
+
 .section-2{
-  
+  width: 100vw;
+  margin-left: 50px;
+  overflow: hidden;
 }
 
 .img-container{
-  width: 100%;
+  width: 100%; 
   height: 100%;
-  margin: 30px;
+  margin: 50px 50px 50px 0;
+
 }
-figure{
-  overflow: hidden;
+.img-container h3{
+  margin-bottom: 20px;
 }
 .img-flexbox{
   display: flex;
   flex-flow: row nowrap;
+  margin-top: 10px;
+  width: 105%;
+  
+}
+.main-title{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.content-box{
+  padding-right: 10px;  
+  width: 13%;
+}
+.content-box img{
+  width: 100%;
+}
+.content-box figcaption{
+  padding-top: 10px;
+  color: $gray2;
+}
+
+.vod-box-width{
+  width: 125%;
+}
+.vod-box{
+  padding-right: 10px;
+  width: 15%;
+}
+.vod-box img{
+  width: 100%;
+}
+.vod-box figcaption{
+  margin-top: 10px;
+}
+.sub-title-text{
+  line-height: 30px;
+  color: gray;
+}
+
+.favorite-box-width{
+  width: 108%;
+}
+.favorite-box{
+  position: relative;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  width: 15%;
+}
+.favorite-box img{
+  width: 100%;
+}
+.img-number{
+  position: absolute;
+  top: 88%;
+  
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: italic;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.img-text{
+  position: absolute;
+  top: 102%;
+  left : 30%;
+  color: $gray2;
+}
+
+
+.live-box-width{
+  width: 114%;
+}
+.live-box{
+  padding-right: 10px;
+  width: 17%;
+}
+.live-box img{
+  width: 100%;
+}
+
+.title-box{
+  display: flex;
+  margin-top: 5px;
+}
+
+.title-box h4{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: italic;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.text-box{
+  padding-left: 20px;
+  line-height: 25px;
+}
+
+.text-box h5{
+  
+}
+
+.text-box h6{
+  font-weight: 300;
+  color: $gray3;
+  font-size: 15px;
+}
+.text-box span{
+  color: $gray5;
+}
+
+.only-img-width{
+  width: 110%;
+}
+.only-img{
+  width: 15%;
+  padding-right: 10px;
+}
+.only-img img{
+  width: 100%;
+}
+
+.sports-banner{
+  display: block;
+  margin : auto;
+}
+
+.event-box{
+  margin-top: 50px;
+}
+.event-box-width{
+  width: 170%;
+}
+.event-title{
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.event-img-box{
+  width: 20%;
+  padding-right: 10px;
+}
+.event-img-box img{
+  width: 100%;
 }

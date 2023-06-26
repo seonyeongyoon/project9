@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko-KR">
 
@@ -12,6 +13,11 @@
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="./src/style/index.css" />
   <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -44,93 +50,253 @@
 
     <section class="section-2">
       <h1 class="a11yHidden">추천 영상</h1>
+
       <div class="img-container">
-        <h3>티빙에서 꼭 봐야하는 콘텐츠</h3>
+        <h3 class="main-title">티빙에서 꼭 봐야하는 콘텐츠</h3>
         <div class="img-flexbox">
-          <figure>
-            <img src="./src/image/main/desktop/img_frame.png" alt="" />
+          <figure class="content-box">
+            <img class="a1" src="./src/image/main/desktop/img_frame.png" alt="" />
             <figcaption>보물찾기</figcaption>
           </figure>
-          <figure>
+          <figure class="content-box">
             <img src="./src/image/main/desktop/img_frame-1.png" alt="" />
             <figcaption>러브캐처 인 발리</figcaption>
           </figure>
-          <figure>
+          <figure class="content-box">
             <img src="./src/image/main/desktop/img_frame-2.png" alt="" />
             <figcaption>술꾼도시여자들</figcaption>
           </figure>
-          <figure>
+          <figure class="content-box">
             <img src="./src/image/main/desktop/img_frame-3.png" alt="" />
-            <figcaption>털사킹</figcaption>
+            <figcaption>털사 킹</figcaption>
           </figure>
-          <figure>
+          <figure class="content-box">
             <img src="./src/image/main/desktop/img_frame-4.png" alt="" />
-            <figcaption>보물찾기</figcaption>
+            <figcaption>아무것도 하고 싶지않아</figcaption>
           </figure>
-          <figure>
+          <figure class="content-box">
             <img src="./src/image/main/desktop/img_frame-5.png" alt="" />
-            <figcaption>보물찾기</figcaption>
+            <figcaption>블랙독</figcaption>
           </figure>
-          <figure>
+          <figure class="content-box">
             <img src="./src/image/main/desktop/img_frame-6.png" alt="" />
-            <figcaption>보물찾기</figcaption>
+            <figcaption>우리들의 블루스</figcaption>
           </figure>
-          <figure>
+          <figure class="content-box">
             <img src="./src/image/main/desktop/img_frame-7.png" alt="" />
-            <figcaption>보물찾기</figcaption>
+            <figcaption>킬리만자로</figcaption>
           </figure>
         </div>
       </div>
+
       <div class="img-container">
-        <h3></h3>
-        <div class="img-flexbox">
+        <h3 class="main-title">Quick VOD</h3>
+        <div class="img-flexbox vod-box-width">
           <figure class="vod-box">
-            <img src="" alt="" />
-            <figcaption>1<span>2</span></figcaption>
+            <img src="./src/image/main/desktop/img_frame-8.png" alt="" />
+            <figcaption>
+              <h4>Jtbc 뉴스룸</h4><span class="sub-title-text">1화</span>
+            </figcaption>
+          </figure>
+          <figure class="vod-box">
+            <img src="./src/image/main/desktop/img_frame-9.png" alt="" />
+            <figcaption>
+              <h4>나는 살기로했다</h4><span class="sub-title-text">1화</span>
+            </figcaption>
+          </figure>
+          <figure class="vod-box">
+            <img src="./src/image/main/desktop/img_frame-10.png" alt="" />
+            <figcaption>
+              <h4>건강 면세점</h4><span class="sub-title-text">1화</span>
+            </figcaption>
+          </figure>
+          <figure class="vod-box">
+            <img src="./src/image/main/desktop/img_frame-11.png" alt="" />
+            <figcaption>
+              <h4>차이나는 클라스</h4><span class="sub-title-text">1화</span>
+            </figcaption>
+          </figure>
+          <figure class="vod-box">
+            <img src="./src/image/main/desktop/img_frame-12.png" alt="" />
+            <figcaption>
+              <h4>알맹이</h4><span class="sub-title-text">1화</span>
+            </figcaption>
+          </figure>
+          <figure class="vod-box">
+            <img src="./src/image/main/desktop/img_frame-13.png" alt="" />
+            <figcaption>
+              <h4>엄마의 봄날</h4><span class="sub-title-text">1화</span>
+            </figcaption>
           </figure>
         </div>
       </div>
       <div class="img-container">
-        <h3></h3>
-        <div class="img-flexbox">
-          <div class="favorite-box"> <!--relative--> 
-            <img src="" alt="" />
+        <h3 class="main-title">실시간 인기 프로그램</h3>
+        <div class="img-flexbox favorite-box-width">
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-14.png" alt="" />
             <!-- p 태그  absolution-->
-            <p><span><!--기울기 및 크기조정--></span></p>
-          </div>
+            <figcaption><span class="img-number">1</span><span class="img-text">재벌집 막내아들</span></figcaption>
+          </figure>
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-15.png" alt="" />
+            <!-- p 태그  absolution-->
+            <figcaption><span class="img-number">2</span><span class="img-text">술꾼도시여자들2</span></figcaption>
+          </figure>
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-16.png" alt="" />
+            <!-- p 태그  absolution-->
+            <figcaption><span class="img-number">3</span><span class="img-text">환혼</span></figcaption>
+          </figure>
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-17.png" alt="" />
+            <!-- p 태그  absolution-->
+            <figcaption><span class="img-number">4</span><span class="img-text">캐나다 체크인</span></figcaption>
+          </figure>
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-18.png" alt="" />
+            <!-- p 태그  absolution-->
+            <figcaption><span class="img-number">5</span><span class="img-text">놀라운 토요일</span></figcaption>
+          </figure>
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-19.png" alt="" />
+            <!-- p 태그  absolution-->
+            <figcaption><span class="img-number">6</span><span class="img-text">쇼미더머니11</span></figcaption>
+          </figure>
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-20.png" alt="" />
+            <!-- p 태그  absolution-->
+            <figcaption><span class="img-number">7</span><span class="img-text">러브캐처</span></figcaption>
+          </figure>
+          <figure class="favorite-box"> <!--relative-->
+            <img src="./src/image/main/desktop/img_frame-21.png" alt="" />
+            <!-- p 태그  absolution-->
+            <figcaption><span class="img-number">8</span><span class="img-text">알쓸인잡</span></figcaption>
+          </figure>
         </div>
       </div>
       <div class="img-container">
-        <h3></h3>
-        <div class="img-flexbox">
+        <h3 class="main-title">인기 LIVE 채널</h3>
+        <div class="img-flexbox live-box-width">
           <div class="live-box">
-            <img src="" alt="" />
+            <img src="./src/image/main/desktop/img_frame-22.png" alt="" />
             <div class="title-box"> <!--flex로 주기-->
-              <h4><i></i></h4> 
+              <h4>1</h4>
               <div class="text-box">
-                <h5></h5>
-                <h6></h6>
-                <span></span>
+                <h5>JTBC</h5>
+                <h6>JTBC 뉴스룸</h6>
+                <span>27.9%</span>
               </div>
-            </div> 
+            </div>
+          </div>
+          <div class="live-box">
+            <img src="./src/image/main/desktop/img_frame-23.png" alt="" />
+            <div class="title-box"> <!--flex로 주기-->
+              <h4>2</h4>
+              <div class="text-box">
+                <h5>tvN</h5>
+                <h6>줄서는 식당</h6>
+                <span>20.7%</span>
+              </div>
+            </div>
+          </div>
+          <div class="live-box">
+            <img src="./src/image/main/desktop/img_frame-24.png" alt="" />
+            <div class="title-box"> <!--flex로 주기-->
+              <h4>3</h4>
+              <div class="text-box">
+                <h5>YTN</h5>
+                <h6>뉴스</h6>
+                <span>19%</span>
+              </div>
+            </div>
+          </div>
+          <div class="live-box">
+            <img src="./src/image/main/desktop/img_frame-25.png" alt="" />
+            <div class="title-box"> <!--flex로 주기-->
+              <h4>4</h4>
+              <div class="text-box">
+                <h5>jtbc2</h5>
+                <h6>드라마</h6>
+                <span>18.7%</span>
+              </div>
+            </div>
+          </div>
+          <div class="live-box">
+            <img src="./src/image/main/desktop/img_frame-26.png" alt="" />
+            <div class="title-box"> <!--flex로 주기-->
+              <h4>5</h4>
+              <div class="text-box">
+                <h5>연합뉴스TV</h5>
+                <h6>뉴스</h6>
+                <span>16%</span>
+              </div>
+            </div>
+          </div>
+          <div class="live-box">
+            <img src="./src/image/main/desktop/img_frame-27.png" alt="" />
+            <div class="title-box"> <!--flex로 주기-->
+              <h4>6</h4>
+              <div class="text-box">
+                <h5>aniMax</h5>
+                <h6>코난</h6>
+                <span>9%</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="img-container">
-        <h3></h3>
-        <div class="img-flexbox">
-          <img src="" alt="" />
+        <h3 class="main-title">오직 티빙에만 있어요</h3>
+        <div class="img-flexbox only-img-width"> <!-- figure 감싸고 캡션 a11y주기-->
+          <figure class="only-img"><img src="./src/image/main/desktop/poster5.png" alt="" />
+            <figcaption class="a11yHidden">전체관람가</figcaption>
+          </figure>
+          <figure class="only-img"><img src="./src/image/main/desktop/poster2.png" alt="" />
+            <figcaption class="a11yHidden">러브캐처</figcaption>
+          </figure>
+          <figure class="only-img"><img src="./src/image/main/desktop/poster7.png" alt="" />
+            <figcaption class="a11yHidden">환승연애2</figcaption>
+          </figure>
+          <figure class="only-img"><img src="./src/image/main/desktop/poster3.png" alt="" />
+            <figcaption class="a11yHidden">몸값</figcaption>
+          </figure>
+          <figure class="only-img"><img src="./src/image/main/desktop/poster4.png" alt="" />
+            <figcaption class="a11yHidden">술꾼도시여자들</figcaption>
+          </figure>
+          <figure class="only-img"><img src="./src/image/main/desktop/poster1.png" alt="" />
+            <figcaption class="a11yHidden" 괴이</figcaption>
+          </figure>
+          <figure class="only-img"><img src="./src/image/main/desktop/poster6.png" alt="" />
+            <figcaption class="a11yHidden">푸드 크로니클</figcaption>
+          </figure>
         </div>
       </div>
       <div class="bottom-banner">
-        <img src="" alt="" />
+        <!-- <h3 class="a11yHidden">스포츠 배너</h3> -->
+        <img class="sports-banner" src="./src/image/main/desktop/img_frame-28.png" alt="" />
       </div>
       <div class="event-box">
-        <h3></h3>
-        <div class="img-flexbox">
+        <h3 class="event-title">이벤트</h3>
+        <div class="img-flexbox event-box-width">
           <div class="event-img-box">
-            <img src="" alt="" />
-          </div>  <!-- 마진으로 좌우 공백-->
+            <img src="./src/image/main/desktop/img_frame-29.png" alt="" />
+          </div>
+          <div class="event-img-box">
+            <img src="./src/image/main/desktop/img_frame-30.png" alt="" />
+          </div>
+          <div class="event-img-box">
+            <img src="./src/image/main/desktop/img_frame-31.png" alt="" />
+          </div>
+          <div class="event-img-box">
+            <img src="./src/image/main/desktop/img_frame-32.png" alt="" />
+          </div>
+          <div class="event-img-box">
+            <img src="./src/image/main/desktop/img_frame-33.png" alt="" />
+          </div>
+          <div class="event-img-box">
+            <img src="./src/image/main/desktop/img_frame-34.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
