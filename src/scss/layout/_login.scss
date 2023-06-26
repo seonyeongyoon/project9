@@ -1,1 +1,118 @@
 @use './../utils' as *;
+
+main {
+    width: 1920px;
+    height: 646px;
+    padding: 70px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    background: #000;
+}
+
+.title_wrap {
+    width: 732px;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 37.897px;
+    font-family: "Pretendard";
+    font-weight: 700;
+    line-height: 140%;
+    gap: 60px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.checks_wrap {
+    width: 732px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 32px 0;
+    align-items: flex-start;
+}
+
+.checks {
+    color: #6b6b6b;
+    font-size: 21.328px;
+    font-family: "Pretendard";
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.btn_color {
+    color: #fff;
+    font-size: 28.43px;
+    font-family: "Pretendard";
+    font-weight: 600;
+    line-height: 150%;
+    width: 732px;
+    height: 86px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #ff153c;
+}
+
+.id_box {
+    width: 732px;
+    height: 96px;
+    display: flex;
+    padding: 0 454px 0 24px;
+    align-items: center;
+    gap: 339px;
+    border-radius: 4px;
+    background: #212121;
+    font-size: 28.43px;
+    line-height: 160%;
+    font-family: "Pretendard";
+}
+
+.pw_box {
+    width: 732px;
+    height: 96px;
+    display: flex;
+    padding: 0 454px 0 24px;
+    align-items: center;
+    gap: 339px;
+    border-radius: 4px;
+    background: #212121;
+    font-size: 28.43px;
+    line-height: 160%;
+    font-family: "Pretendard";
+}
+
+.no_border_btn {
+    width: 732px;
+    display: flex;
+    padding: 48px 0 0 0;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.no_border {
+    color: #a6a6a6;
+    font-size: 21.328px;
+    font-family: "Pretendard";
+    line-height: 160%;   
+    width: 732px;
+    display: flex;
+    padding: 48px 0 0 0;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
