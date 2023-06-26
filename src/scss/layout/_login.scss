@@ -26,6 +26,7 @@ main {
     font-family: "Pretendard";
     font-weight: 700;
     line-height: 140%;
+    gap: 60px;
 }
 
 form {
@@ -75,6 +76,9 @@ form {
     gap: 339px;
     border-radius: 4px;
     background: #212121;
+    font-size: 28.43px;
+    line-height: 160%;
+    font-family: "Pretendard";
 }
 
 .pw_box {
@@ -86,4 +90,29 @@ form {
     gap: 339px;
     border-radius: 4px;
     background: #212121;
+    font-size: 28.43px;
+    line-height: 160%;
+    font-family: "Pretendard";
+}
+
+.no_border_btn {
+    width: 732px;
+    display: flex;
+    padding: 48px 0 0 0;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.no_border {
+    color: #a6a6a6;
+    font-size: 21.328px;
+    font-family: "Pretendard";
+    line-height: 160%;   
+    width: 732px;
+    display: flex;
+    padding: 48px 0 0 0;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
