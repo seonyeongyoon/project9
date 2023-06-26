@@ -36,17 +36,18 @@
         </ul>
       </nav>
       <!-- //navigation -->
-      <form action="https://formspree.io/seulbinim@gmail.com" method="POST" class="searchForm">
+      <form action="" method="POST" class="searchForm">
         <fieldset>
           <legend>검색</legend>
           <div class="searchForm__group">
-            <button type="submit" class="searchForm__button"><span class="a11yHidden">검색</span></button>
+            <a href="./search.html" class="searchForm__button" target="_blank"><span class="a11yHidden">검색</span></a>
+            <!-- <button type="submit" class="searchForm__button" onclick="window.open('/search.html')" target="_blank"><span class="a11yHidden">검색</span></button> -->
           </div>
         </fieldset>
       </form>
       <!-- //searchForm : 누르면 검색창 페이지로 이동 -->
       <div class="userInfo">
-        <button tyle="button" class="userInfo__button"></button>
+        <button type="button" class="userInfo__button"></button>
         <div class="userInfo__content">
           <div class="userInfo__profile">
             <figure class="userInfo__profile__img">
@@ -54,7 +55,7 @@
             </figure>
             <div class="userInfo__profile__info">
               <p class="profile__name">김멋사</p>
-              <button type="button" class="profile__button">프로필 전환></button>
+              <button type="button" class="profileChange__button">프로필 전환 ></button>
             </div>
           </div>
           <div class="userInfo__menu">
@@ -63,7 +64,7 @@
               <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">이용권</a></li>
               <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">쿠폰등록</a></li>
               <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">고객센터</a></li>
-              <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">로그아웃</a></li>
+              <li class="userInfo__menu__item"><a href="./logout.html" class="userInfo__menu__link">로그아웃</a></li>
             </ul>
           </div>
         </div>

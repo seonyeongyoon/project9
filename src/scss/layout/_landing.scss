@@ -24,20 +24,34 @@ main {
     overflow: hidden;
   }
   &__imgbox > div {
-    flex-basis: rem(908px);
+    flex-basis: rem(277px);
     flex-shrink: 0;
+
+    @include desktop {
+      flex-basis: rem(908px);
+    }
   }
 }
 .section3 {
   &__slidebox {
     overflow: hidden;
+    margin-top: rem(70px);
 
-    .slide__row {
+    .slide__row__wrap {
       @include flexbox($justify: center);
       gap: rem(20px);
+      animation: slidein 50000ms infinite;
     }
-    .slide__row + .slide__row {
+    .slide__row__wrap + .slide__row__wrap {
       margin-top: 1rem;
+    }
+    .slide__row {
+      @include flexbox();
+      flex-shrink: 0;
+      gap: rem(20px);
+    }
+    .slide__row__wrap + .slide__row__wrap .slide__row {
+      transform: translateX(rem(90px));
     }
     .slide__row figure {
       flex-basis: rem(470px);
@@ -47,12 +61,15 @@ main {
 }
 .section4 {}
 
+
 /* 섹션 공통 */
-main section {
+main .section1,
+main .section2,
+main .section3,
+main .section4 {
   @include flexbox($direction: column, $justify: center, $items: center);
   width: 100%;
   min-height: 100vh;
- 
 }
 
 main [class*="__container"] {
@@ -93,4 +110,68 @@ main [class*="__summary"] {
   margin-top: rem(60px);
 }
 
+@include tablet {
+  /* 섹션 공통 */
+  main [class*="__title"] {
+    font-size: rem(22px);
+  }
 
+  main [class*="__subtitle"] {
+    font-size: rem(16px);
+  }
+
+  main [class*="__summary"] {
+    font-size: rem(12px);
+  }
+
+  .join__button {
+    width: rem(283px);
+    font-size: rem(16px);
+    background: $red_landing url("/src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
+    padding: rem(19px);
+    margin-top: rem(60px);
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@include mobile {
+  /* 섹션 공통 */
+  main [class*="__title"] {
+    font-size: rem(38px);
+  }
+
+  main [class*="__subtitle"] {
+    font-size: rem(29px);
+  }
+
+  main [class*="__summary"] {
+    font-size: rem(29px);
+  }
+
+  .join__button {
+    width: rem(451px);
+    font-size: rem(29px);
+    background: $red_landing url("/src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
+    padding: rem(19px);
+    margin-top: rem(60px);
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
