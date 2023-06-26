@@ -1,25 +1,18 @@
-@use './../utils/color' as *;
+@use './../utils' as *;
+
 
 body{
   background-color: black;
   padding: 0;
   margin: 0;
+  overflow-x: hidden; //가로 스크롤바 숨기기
+  
 }
 .section-1,.section-2{
   font-size: 1rem;
-
 }
-
 /* Accessibility Styles */
-.a11yHidden {
-  overflow: hidden;
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
+
 
 .slider {
   position: relative;
@@ -71,7 +64,7 @@ body{
 
 .details {
   text-decoration: none;
-  border: 1px solid gray;
+  border: 1px solid $gray3;
   padding: 12px 24px;
   border-radius: 10px;
   font-size: 1rem;
@@ -80,12 +73,12 @@ body{
 }
 
 .details:hover {
-  border: 1px solid white;
+  border: 1px solid $white;
 }
 
 .dot-container{
   position: absolute;
-  color: white;
+  color: $white;
   top: 69%;
   left: 3.5%;
 }
@@ -120,97 +113,131 @@ body{
 // section 2 파트 시작
 
 .section-2{
-  width: 100vw;
-  margin-left: 50px;
-  overflow: hidden;
+  width: 100%;
+  margin-left: rem(30px);
+  // overflow: hidden;
 }
 
 .img-container{
   width: 100%; 
   height: 100%;
-  margin: 50px 50px 50px 0;
+  margin: rem(50px) rem(50px) rem(50px) 0;
 
 }
 .img-container h3{
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
 }
 .img-flexbox{
-  display: flex;
-  flex-flow: row nowrap;
-  margin-top: 10px;
+  @include flexbox($direction: row, $wrap : nowrap);
+  margin-top: rem(10px);
   width: 105%;
-  
-}
-.main-title{
-  font-size: 1.25rem;
-  font-weight: bold;
 }
 
+.main-title{ 
+  font-size: rem(20px);
+  font-weight: bold;
+}
+.content-box-width{
+  width: 109%;
+  @include tablet{
+    width: 140%;
+  }
+  @include mobile{
+    width: 245%;
+  }
+}
 .content-box{
-  padding-right: 10px;  
+  padding-right: rem(13px);  
   width: 13%;
+
 }
 .content-box img{
   width: 100%;
 }
 .content-box figcaption{
-  padding-top: 10px;
+  padding-top: rem(10px);
   color: $gray2;
 }
 
 .vod-box-width{
   width: 125%;
+  @include tablet{
+    width: 200%;
+  }
+  @include mobile{
+    width: 310%;
+  }
 }
 .vod-box{
-  padding-right: 10px;
+  padding-right: rem(13px);
   width: 15%;
+  @include tablet{
+    width: 20%;
+  }
 }
 .vod-box img{
   width: 100%;
 }
 .vod-box figcaption{
-  margin-top: 10px;
+  margin-top: rem(10px);
 }
 .sub-title-text{
-  line-height: 30px;
+  line-height: rem(30px);
   color: gray;
 }
 
 .favorite-box-width{
   width: 108%;
+  @include tablet{
+    width: 145%;
+  }
+  @include mobile{
+    width: 250%;
+  }
 }
 .favorite-box{
   position: relative;
-  margin-bottom: 25px;
-  padding-right: 10px;
+  margin-bottom: rem(25px);
+  padding-right: rem(13px);
   width: 15%;
+  
 }
 .favorite-box img{
   width: 100%;
 }
+// @mixin pos($pos: absolute, $t: initial, $r: initial, $b: initial, $l: initial) {
+//   position: $pos;
+//   top: $t;
+//   right: $r;
+//   bottom: $b;
+//   left: $l;
+// }
 .img-number{
-  position: absolute;
-  top: 88%;
+  @include pos($t: 88%);
   
   font-family: 'Noto Sans KR', sans-serif;
   font-style: italic;
-  font-size: 70px;
+  font-size: rem(70px);
   font-weight: bold;
 }
 
 .img-text{
-  position: absolute;
-  top: 102%;
-  left : 30%;
+  @include pos($t: 102%, $l : 30%);
   color: $gray2;
 }
 
 
 .live-box-width{
   width: 114%;
+  @include tablet{
+    width: 180%;
+  }
+  @include mobile{
+    width: 280%;
+  }
 }
 .live-box{
-  padding-right: 10px;
+  padding-right: rem(13px);
   width: 17%;
 }
 .live-box img{
@@ -219,19 +246,20 @@ body{
 
 .title-box{
   display: flex;
-  margin-top: 5px;
+  margin-top: rem(5px);
 }
 
 .title-box h4{
   font-family: 'Noto Sans KR', sans-serif;
   font-style: italic;
-  font-size: 70px;
+  font-size: rem(70px);
   font-weight: bold;
 }
 
 .text-box{
-  padding-left: 20px;
-  line-height: 25px;
+  margin-top: 5px;
+  padding-left: rem(20px);
+  line-height: rem(25px);
 }
 
 .text-box h5{
@@ -241,7 +269,7 @@ body{
 .text-box h6{
   font-weight: 300;
   color: $gray3;
-  font-size: 15px;
+  font-size: rem(15px);
 }
 .text-box span{
   color: $gray5;
@@ -249,35 +277,59 @@ body{
 
 .only-img-width{
   width: 110%;
+  @include tablet{
+    width: 160%;
+  }
+  @include mobile{
+    width: 320%;
+  }
 }
 .only-img{
   width: 15%;
-  padding-right: 10px;
+  padding-right: rem(13px);
 }
 .only-img img{
   width: 100%;
 }
 
+.bottom-banner{
+  padding-right: 60px; // section2에서 left 30준것 + 30
+}
 .sports-banner{
   display: block;
+  width: 100%;
   margin : auto;
 }
 
 .event-box{
-  margin-top: 50px;
+  margin-top: rem(30px);
 }
 .event-box-width{
   width: 170%;
+  @include mobile{
+    width: 280%;
+  }
 }
 .event-title{
-  font-size: 1.25rem;
+  font-size: rem(20px);
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: rem(15px);
 }
 .event-img-box{
-  width: 20%;
-  padding-right: 10px;
+  width: 11.1%;
+  padding-right: rem(13px);
+  @include tablet{
+    width: 17%;
+  }
+  @include mobile{
+    width: 17%;
+  }
+  
 }
 .event-img-box img{
   width: 100%;
 }
+// desktop
+
+
+
