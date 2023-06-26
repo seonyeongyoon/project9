@@ -5,7 +5,92 @@ main {
 }
 
 .section1 {
-  width: 100%;
-  height: 100vh;
   background: #000 url(/src/image/landing/backgorund-1.png) no-repeat center / cover;
+
+  &__textbox {
+    //max-width: rem(545px);
+  }
+
+  &__subtitle {
+    color: $gray4;
+  }
 }
+
+.section2 {
+  &__imgbox {
+    @include flexbox($justify: center);
+    gap: rem(21px);
+    margin-top: rem(50px);
+    overflow: hidden;
+  }
+  &__imgbox > div {
+    flex-basis: rem(908px);
+    flex-shrink: 0;
+  }
+}
+.section3 {
+  &__slidebox {
+    overflow: hidden;
+
+    .slide__row {
+      @include flexbox($justify: center);
+      gap: rem(20px);
+    }
+    .slide__row + .slide__row {
+      margin-top: 1rem;
+    }
+    .slide__row figure {
+      flex-basis: rem(470px);
+      flex-shrink: 0;
+    }
+  }
+}
+.section4 {}
+
+/* 섹션 공통 */
+main section {
+  @include flexbox($direction: column, $justify: center, $items: center);
+  width: 100%;
+  min-height: 100vh;
+ 
+}
+
+main [class*="__container"] {
+  text-align: center;
+}
+
+main [class*="__title"] {
+  font-size: rem(50px);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+main [class*="__subtitle"] {
+  color: $gray2;
+  font-size: rem(28px);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: rem(20px);
+}
+
+main [class*="__summary"] {
+  color: $gray2;
+  font-size: rem(22px);
+  line-height: 1.6;
+}
+
+.join__button {
+  //@include flexbox($items: center);
+  display: block;
+  width: rem(506px);
+  font-size: rem(28px);
+  font-weight: 600;
+  line-height: 1.5;
+  background: $red_landing url("/src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
+  border-radius: rem(4px);
+  text-align: center;
+  padding: rem(19px);
+  margin-top: rem(60px);
+}
+
+

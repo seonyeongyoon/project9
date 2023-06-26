@@ -5,18 +5,61 @@
   gap: rem(24px);
   padding: rem(140px) rem(68px) rem(170px);
   font-size: rem(22px);
+  line-height: 1.6;
 
+  &__quick {
+    @include flexbox($justify: space-between);
+    color: $gray2;
+
+    .notice strong {
+      color: $gray5;
+      margin-right: rem(20px);
+    }
+    button {
+      color: $gray2;
+      padding: 0;
+    }
+    button:after {
+      content:'+';
+      margin-left: 1rem;
+    }
+
+    button:last-child:before {
+      display: inline-block;
+      content:'';
+      width: 1px;
+      height: rem(20px);
+      background-color: $gray5;
+      margin-left: rem(16px);
+      margin-right: rem(16px);
+      vertical-align: -.2rem;
+    } 
+
+    @include mobile {
+      .quickBtn__group {
+        display: none;
+      }
+    }
+  }
 
   &__list {
     @include flexbox();
     gap: rem(36px);
     color: $gray2;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__content {
     color: $gray5;
     a {
       text-decoration: underline;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
