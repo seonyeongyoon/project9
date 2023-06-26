@@ -1,4 +1,4 @@
-@use './../utils' as *;
+@use './../utils/color' as *;
 
 body{
   background-color: black;
@@ -7,7 +7,9 @@ body{
 }
 .section-1,.section-2{
   font-size: 1rem;
+
 }
+
 /* Accessibility Styles */
 .a11yHidden {
   overflow: hidden;
