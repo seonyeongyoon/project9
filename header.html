@@ -29,10 +29,10 @@
       <nav class="menu">
         <h2 class="a11yHidden">메인 메뉴</h2>
         <ul class="menu__list">
-          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><span class="icon"></span>실시간</a></li>
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><img class="icon" src="/src/image/header/Live.svg"/>실시간</a></li>
           <li class="menu__item"><a href="/" class="menu__link" tabindex="-1">TV프로그램</a></li>
           <li class="menu__item"><a href="/" class="menu__link" tabindex="-1">영화</a></li>
-          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><span class="icon"></span><span class="a11yHidden">Paramount</span></a></li>
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><img class="icon" src="/src/image/header/Paramount.svg"/><span class="a11yHidden">paramount+</span></a></li>
         </ul>
       </nav>
       <!-- //navigation -->
@@ -40,16 +40,34 @@
         <fieldset>
           <legend>검색</legend>
           <div class="searchForm__group">
-            <div class="formInput">
-              <label for="search" class="a11yHidden formInput__label">검색어</label>
-              <input id="search" class="formInput__input" type="search" required="" placeholder="검색어를 입력하세요." name="search">
-            </div>
-            <button type="submit" class="button button--primary button--fill">검색</button>
+            <button type="submit" class="searchForm__button"><span class="a11yHidden">검색</span></button>
           </div>
         </fieldset>
       </form>
       <!-- //searchForm : 누르면 검색창 페이지로 이동 -->
-      <div class="userInfo"></div>
+      <div class="userInfo">
+        <button tyle="button" class="userInfo__button"></button>
+        <div class="userInfo__content">
+          <div class="userInfo__profile">
+            <figure class="userInfo__profile__img">
+              <img src="/src/image/header/Profile.svg" alt="" />
+            </figure>
+            <div class="userInfo__profile__info">
+              <p class="profile__name">김멋사</p>
+              <button type="button" class="profile__button">프로필 전환></button>
+            </div>
+          </div>
+          <div class="userInfo__menu">
+            <ul class="userInfo__menu__list">
+              <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">MY</a></li>
+              <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">이용권</a></li>
+              <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">쿠폰등록</a></li>
+              <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">고객센터</a></li>
+              <li class="userInfo__menu__item"><a href="" class="userInfo__menu__link">로그아웃</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <!-- //userInfo -->
     </header>
   </body>
