@@ -53,6 +53,7 @@ header {
     margin-left: auto;
     
     &__button {
+      display: block;
       width: 2.333rem;
       height: 2.333rem;
       background: url(/src/image/header/Search.svg) center / 100% no-repeat;
@@ -65,21 +66,23 @@ header {
   .userInfo {
     position: relative;
     
-    &__button {
-      width: 2.333rem;
-      height: 2.333rem;
-      background: url(/src/image/header/Profile.svg) center / 100% no-repeat;
-    }
-    &__button:hover + .userInfo__content {
+    &:hover .userInfo__content {
       visibility: visible;
       opacity: 1;
       transition: visibility 0s linear 0s,opacity 0.2s,transform 0.2s;
     }
     
+    &__button {
+      width: 2.333rem;
+      height: 2.333rem;
+      background: url(/src/image/header/Profile.svg) center / 100% no-repeat;
+    }
+    
 
     &__content {
       @include pos;
-      left: rem(-180px);
+      right: 0;
+      top: rem(60px);
       width: rem(275px);
       background: $dark-bg2;
       border: 1px solid $gray7;
@@ -94,16 +97,21 @@ header {
       padding: rem(20px) rem(27px);
       position: relative;
 
-      &__img {}
+      &__img {
+        width: 3.5rem;
+        height: 3.5rem;
+        flex-shrink: 0;
+      }
       &__info {
         .profile__name {
           color: $white;
           font-size: rem(20px);
           font-weight: 700;
         }
-        .profile__button {
+        .profileChange__button {
           color: $gray3;
           font-size: 1rem;
+          margin-top: rem(5px);
         }
       }
     }
@@ -119,12 +127,15 @@ header {
     }
 
     &__menu {
-      padding: rem(20px);
+      padding: rem(20px) 0;
       &__link {
         display: block;
         color: $gray3;
         font-size: rem(20px);
         padding: rem(8px) rem(27px);
+      }
+      &__link:hover {
+        background: $gray7;
       }
     }
   }
@@ -136,4 +147,5 @@ button {
   appearance: none;
   outline: none;
   border: none;
+  padding: 0;
 }
