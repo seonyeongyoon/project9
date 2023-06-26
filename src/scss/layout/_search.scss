@@ -1,27 +1,131 @@
 @use './../utils' as *;
 
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+  -webkit-appearance: none;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background: url(./../image/search/Device=Desktop\,\ Type=No_Filled.png) no-repeat right;
+}
+
 .search {
   width: 80%;
-  margin: 50px auto 0;
-}
+  @include autoMargin($marginX: auto);
+  
+  
+  &__form {
+    border-bottom: 1px solid $white;
+    @include marginY($marginY: 50px);
+    @include autoMargin;
+  }
+  
+  &__formGroup {
+    width: 100%;
+    @include flexbox($items: center);
+  }
+  
+  &__inputGroup {
+    flex-grow: 1;
+    background: url(./../../image/search/Search.png) no-repeat;
+  }
+  
+  &__input {
+    width: 100%;
+    color: $gray7;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    background: transparent;
+    @include paddingY(15px);
+  }
+  
+  &__button {
+    width: 50px;
+    height: 50px;
+    background: url(./../image/search/Search.png);
+  }
+  
+  
+  &__listGroup {
+    @include flexbox;
+  }
+  
+  &__recent, &__realtime {
+    width: 50%;
+  }
+  
+  &__title {
+    color: $gray2;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    @include flexbox($items: center);
+  }
 
-.search__form {
-  border-bottom: 1px solid $white;
-}
+  &__history {
+    color: $gray3;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  @at-root .button {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
 
-.search__inputGroup {
-  flex-grow: 1;
-}
+  &__none {
+    display: block;
+  }
 
-.search__formGroup {
-  width: 100%;
-  display: flex;
+  &__eraseAll {
+    color: $gray6;
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  
+  &__eraseAll &__erase {
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    background: url(./../image/search/Device=Desktop\,\ Type=Filled.png) no-repeat center;
+  }
+  
+  &__erase {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: bottom;
+    background: url(./../image/search/Device=Desktop\,\ Type=No_Filled.png) no-repeat center;
+  }
+  
+  &__lists {
+    color: $gray3;
+    font-size: 1.2rem;
+  }
+  
+  &__list {
+    padding-bottom: 25px;
+  }
+  
+  &__time {
+    color: $gray5;
+    font-size: 1.2rem;
+  }
+  
+  &__rank {
+    width: 30px;
+    display: inline-block;
+    color: $red_login;
+  }
 
-}
-
-.search__input {
-  background: transparent;
-  color: $gray7;
-  border: none;
-  padding: 10px 0;
+  @include mobile {
+    &__input {
+      font-size: 1.5rem;
+    }
+  }
 }
