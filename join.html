@@ -19,8 +19,11 @@
     />
     <link rel="stylesheet" href="./src/style/index.css" />
     <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
+    <script src="src/js/include.js" defer></script>
   </head>
-  <body>
+
+  <body class="profile__body">
+    <div w3-include-html="./header.html"></div>
     <main class="join_page">
       <section class="join">
         <div class="content_wrap">
@@ -33,24 +36,25 @@
         </div>
         <div class="info_wrap">
           <div class="make_id">
-            <label for="userId" class="data_input layout_flex">
+            <label for="userId" class="data_input_id layout_flex">
               <input type="text" id="userId" class="new_id" required placeholder="아이디"/>
             </label>
-            <p>영문 또는 영문, 숫자 조합 6~12자리</p>
+            <p class="input_info">영문 또는 영문, 숫자 조합 6~12자리</p>
            </div>
            <div class="make_pw">
-            <label for="userPw" class="data_input layout_flex">
+            <label for="userPw" class="data_input_pw layout_flex">
               <input type="password" id="userPw" class="new_pw" required placeholder="비밀번호" />
             </label>
             <p class="input_info">영문,숫자,특수문자(~!@#$%^&*) 조합 8~15자리</p>
            </div>
            <div class="make_pw">
-            <label for="passwordCheck" class="data_input layout_flex">
+            <label for="passwordCheck" class="data_input_check layout_flex">
               <input type="password" id="passwordCheck" class="new_pw_check" required placeholder="비밀번호 확인" />
+              <button id="closePwCheck"></button>
             </label>
            </div>
            <div class="make_email">
-            <label for="email" class="data_input layout_flex">
+            <label for="email" class="data_input_email layout_flex">
               <input type="text" id="email" class="new_email" required placeholder="이메일" />
            </label>
           </div>
@@ -59,7 +63,7 @@
           <li class="check_list">
             <input type="checkbox" id="agreeAll" />
             <label for="agreeAll">
-              <h5>모두 동의합니다.</h5>
+              <span>모두 동의합니다.</span>
             </label>
           </li>
         </ul>
@@ -120,5 +124,6 @@
         </div>
       </section>
     </main>
+    <div w3-include-html="./footer.html"></div>
   </body>
 </html>
