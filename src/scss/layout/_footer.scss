@@ -10,6 +10,8 @@
   &__quick {
     @include flexbox($justify: space-between);
     color: $gray2;
+    border-top: 1px solid $gray8;
+    padding-top: 1rem;
 
     .notice strong {
       color: $gray5;
@@ -32,7 +34,7 @@
       background-color: $gray5;
       margin-left: rem(16px);
       margin-right: rem(16px);
-      vertical-align: -.2rem;
+      vertical-align: -.3rem;
     } 
 
     @include mobile {
@@ -55,7 +57,6 @@
 
   &__link {
     display: block;
-    font-size: rem(22px);
   }
 
   &__content {
