@@ -7,6 +7,10 @@
   // 검색 페이지 배경 색상 설정
   &__body {
     background: #191919;
+
+    header {
+      position: relative;
+    }
   }
   
   &__form {
