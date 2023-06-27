@@ -15,6 +15,10 @@
     @include autoMargin;
   }
   
+  &__fieldset {
+    width: 100%;
+  }
+
   // 검색창 정렬
   &__formGroup {
     @include flexbox($items: center);
