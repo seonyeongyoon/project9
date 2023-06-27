@@ -1,283 +1,374 @@
-@use './../utils/color' as *;
+@use './../utils' as *;
 
-body{
+
+body {
   background-color: black;
   padding: 0;
   margin: 0;
-}
-.section-1,.section-2{
-  font-size: 1rem;
+  overflow-x: hidden; //가로 스크롤바 숨기기
 
+}
+
+header{
+  transition: background-color 0.6s ease-in-out;
+}
+
+.banner,
+.recommend {
+  font-size: 1rem;
 }
 
 /* Accessibility Styles */
-.a11yHidden {
-  overflow: hidden;
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
 
-.slider {
-  position: relative;
-  width: 100%;
-  /* height: 0;  aspect-ratio 와 마찬가지로 비율 정하는 방법 
+.banner {
+  &__slider {
+    position: relative;
+    width: 100%;
+    /* height: 0;  aspect-ratio 와 마찬가지로 비율 정하는 방법 
   padding-bottom: 50%; 가로 너비 비율 지정해주기 */
-  aspect-ratio: 15 / 7; 
-  overflow: hidden;
+    aspect-ratio: 15 / 7;
+    overflow: hidden;
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-size: cover;
+      /* background-position: center; */
+      transition: opacity 0.5s ease-in-out;
+      /* opacity 속성 사용시 0.5 초의 지연시간을 줌.*/
+    }
+
+    &__prev {
+      position: absolute;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      top: 45%;
+      left: 1%;
+    }
+
+    &__next {
+      position: absolute;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      top: 45%;
+      right: 1%;
+    }
+
+    &__details {
+      position: absolute;
+      color: white;
+      text-decoration: none;
+      border: 1px solid $gray3;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      bottom: 20%;
+      right: 5%;
+    }
+
+    &__details:hover {
+      border: 1px solid $white;
+    }
+
+    &__dot {
+      position: absolute;
+      color: $white;
+      top: 69%;
+      left: 3.5%;
+
+      &__toggle {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+      }
+
+      &__button {
+        cursor: pointer;
+        border: none;
+        background-color: gray;
+
+        width: 10px;
+        height: 12px;
+        border-radius: 50%;
+      }
+
+      &__button.active {
+        background-color: white;
+      }
+    }
+  }
 }
 
-.slide-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  
-  background-size: cover;
-  /* background-position: center; */
-  transition: opacity 0.5s ease-in-out; /* opacity 속성 사용시 0.5 초의 지연시간을 줌.*/
- 
-}
-
-
-.prev,
-.next,
-.details {
-  position: absolute;
-  color: white;
-}
-
-.prev {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  top: 45%;
-  left: 1%;
-  
-}
-
-.next {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  top: 45%;
-  right: 1%;
-}
-
-.details {
-  text-decoration: none;
-  border: 1px solid gray;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-size: 1rem;
-  bottom: 20%;
-  right: 5%;
-}
-
-.details:hover {
-  border: 1px solid white;
-}
-
-.dot-container{
-  position: absolute;
-  color: white;
-  top: 69%;
-  left: 3.5%;
-}
-
-.toggle-button-container{
-  
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  
-}
-
-
-
-.dot{
-  cursor: pointer;
-  border: none;
-  background-color: gray;
-  
-  width: 10px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.dot.active{
-  background-color: white;
-}
 
 // section 1 파트 끝
 
 
 // section 2 파트 시작
 
-.section-2{
-  width: 100vw;
-  margin-left: 50px;
-  overflow: hidden;
-}
-
-.img-container{
-  width: 100%; 
-  height: 100%;
-  margin: 50px 50px 50px 0;
-
-}
-.img-container h3{
-  margin-bottom: 20px;
-}
-.img-flexbox{
-  display: flex;
-  flex-flow: row nowrap;
-  margin-top: 10px;
-  width: 105%;
-  
-}
-.main-title{
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.content-box{
-  padding-right: 10px;  
-  width: 13%;
-}
-.content-box img{
+.recommend {
   width: 100%;
-}
-.content-box figcaption{
-  padding-top: 10px;
-  color: $gray2;
-}
-
-.vod-box-width{
-  width: 125%;
-}
-.vod-box{
-  padding-right: 10px;
-  width: 15%;
-}
-.vod-box img{
-  width: 100%;
-}
-.vod-box figcaption{
-  margin-top: 10px;
-}
-.sub-title-text{
-  line-height: 30px;
-  color: gray;
-}
-
-.favorite-box-width{
-  width: 108%;
-}
-.favorite-box{
-  position: relative;
-  margin-bottom: 25px;
-  padding-right: 10px;
-  width: 15%;
-}
-.favorite-box img{
-  width: 100%;
-}
-.img-number{
-  position: absolute;
-  top: 88%;
-  
-  font-family: 'Noto Sans KR', sans-serif;
-  font-style: italic;
-  font-size: 70px;
-  font-weight: bold;
-}
-
-.img-text{
-  position: absolute;
-  top: 102%;
-  left : 30%;
-  color: $gray2;
-}
+  margin-left: rem(30px);
+  // overflow: hidden;
 
 
-.live-box-width{
-  width: 114%;
-}
-.live-box{
-  padding-right: 10px;
-  width: 17%;
-}
-.live-box img{
-  width: 100%;
+  &__imgbox {
+    width: 100%;
+    height: 100%;
+    margin: rem(50px) rem(50px) rem(50px) 0;
+
+    
+    &__title {
+      margin-bottom: rem(20px);
+      font-size: rem(20px);
+      font-weight: bold;
+    }
+
+    .content--box--width {
+      width: 109%;
+
+      @include tablet {
+        width: 140%;
+      }
+
+      @include mobile {
+        width: 245%;
+      }
+    }
+
+    .vod--box--width {
+      width: 125%;
+
+      @include tablet {
+        width: 200%;
+      }
+
+      @include mobile {
+        width: 310%;
+      }
+    }
+
+    .favorite--box--width {
+      width: 108%;
+    
+      @include tablet {
+        width: 145%;
+      }
+    
+      @include mobile {
+        width: 250%;
+      }
+    }
+
+
+    .live--box--width {
+      width: 114%;
+    
+      @include tablet {
+        width: 180%;
+      }
+    
+      @include mobile {
+        width: 280%;
+      }
+    }
+
+
+    .only--img--width {
+      width: 110%;
+    
+      @include tablet {
+        width: 160%;
+      }
+    
+      @include mobile {
+        width: 320%;
+      }
+    }
+
+    
+
+    .event--box--width {
+      width: 170%;
+    
+      @include mobile {
+        width: 280%;
+      }
+    }
+
+
+    &__flexbox {
+      @include flexbox($direction: row, $wrap : nowrap);
+      margin-top: rem(10px);
+      width: 105%;
+
+      &__contentbox {
+        padding-right: rem(13px);
+        width: 13%;
+        transition: transform 0.5s ease-in-out ;
+      }
+      &__contentbox:hover{
+        transform: translateY(-15px);
+        
+      }
+      // &__contentbox:
+
+      &__contentbox img {
+        width: 100%;
+      }
+
+      &__contentbox figcaption {
+        padding-top: rem(10px);
+        color: $gray2;
+      }
+
+
+      &__vodbox {
+        padding-right: rem(13px);
+        width: 15%;
+
+        @include tablet {
+          width: 20%;
+        }
+        &__text{
+          line-height: rem(30px);
+          color: gray;
+        }
+        transition: transform 0.5s ease-in-out ;
+      }
+      &__vodbox:hover{
+        transform: translateY(-15px);
+      }
+      &__vodbox img{
+        width: 100%;
+      }
+      &__vodbox figcaption{
+        margin-top: rem(10px);
+      }
+
+
+      &__favoritebox{
+        position: relative;
+        margin-bottom: rem(25px);
+        padding-right: rem(13px);
+        width: 15%;
+
+        &__number{
+          @include pos($t: 88%);
+          font-family: 'Noto Sans KR', sans-serif;
+          font-style: italic;
+          font-size: rem(70px);
+          font-weight: bold;
+        }
+        &__text{
+          @include pos($t: 102%, $l : 30%);
+          color: $gray2;
+        }
+        transition: transform 0.5s ease-in-out ;
+      }
+      &__favoritebox:hover{
+        transform: translateY(-15px);
+      }
+      &__favoritebox img{
+        width: 100%;
+      }
+
+      &__livebox{
+        padding-right: rem(13px);
+        width: 17%;
+        position: relative;
+        margin-bottom: 50px;
+        img{
+          width: 100%;
+        }
+        transition: transform 0.5s ease-in-out ;
+        &__mainbox{
+          display: flex;
+          position: absolute;
+          top: 96%;
+          margin-top: rem(5px);
+        
+          &__textbox{
+            line-height: rem(25px);
+            margin-top: rem(9px);
+            padding-left: rem(20px);
+
+            h5{
+
+            }
+            h6{
+              font-weight: 300;
+              color: $gray3;
+              font-size: rem(15px);
+            }
+            
+            span{
+              color: $gray5;
+            }
+          }
+          h4{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-style: italic;
+            font-size: rem(70px);
+            font-weight: bold;
+          }
+        }
+      }
+      
+      &__livebox:hover{
+        transform: translateY(-15px);
+      }
+      &__onlyimgbox{
+        width: 15%;
+        padding-right: rem(13px);
+        img{
+          width: 100%;
+        }
+        transition: transform 0.5s ease-in-out ;
+      }
+      &__onlyimgbox:hover{
+        transform: translateY(-15px);
+      }
+
+
+      &__eventimg{
+        width: 11.1%;
+        padding-right: rem(13px);
+      
+        @include tablet {
+          width: 17%;
+        }
+      
+        @include mobile {
+          width: 17%;
+        }
+      }
+    }  //플렉스박스 끝
+  }
+
+  &__bottombox{
+    padding-right: 60px; // section2에서 left 30준것 + 30
+    transition: transform 0.5s ease-in-out ;
+    &__sportsbanner{
+      display: block;
+      width: 90%;
+      margin: auto;
+      
+    }
+  }
+  &__bottombox:hover{
+    transform: translateY(-15px);
+  }
 }
 
-.title-box{
-  display: flex;
-  margin-top: 5px;
-}
 
-.title-box h4{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-style: italic;
-  font-size: 70px;
-  font-weight: bold;
-}
 
-.text-box{
-  padding-left: 20px;
-  line-height: 25px;
-}
 
-.text-box h5{
-  
-}
 
-.text-box h6{
-  font-weight: 300;
-  color: $gray3;
-  font-size: 15px;
-}
-.text-box span{
-  color: $gray5;
-}
-
-.only-img-width{
-  width: 110%;
-}
-.only-img{
-  width: 15%;
-  padding-right: 10px;
-}
-.only-img img{
-  width: 100%;
-}
-
-.sports-banner{
-  display: block;
-  margin : auto;
-}
-
-.event-box{
-  margin-top: 50px;
-}
-.event-box-width{
-  width: 170%;
-}
-.event-title{
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.event-img-box{
-  width: 20%;
-  padding-right: 10px;
-}
-.event-img-box img{
-  width: 100%;
-}

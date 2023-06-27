@@ -19,16 +19,18 @@
     />
     <link rel="stylesheet" href="./src/style/index.css" />
     <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
+    <script src="src/js/include.js" defer></script>
   </head>
   <body>
+    <div w3-include-html="./header.html"></div>
     <main>
       <section class="section1">
         <div class="section1__container">
           <div class="section1__textbox">
             <h2 class="section1__title">
-              <p>타잉 오리지널 콘텐츠,</p>
-              <p>방송, 영화, 해외시리즈까지!</p>
-              <p></p>재미를 플레이해보세요.</p>
+              <span>타잉 오리지널 콘텐츠,</span>
+              <span>방송, 영화, 해외시리즈까지!</span>
+              <span>재미를 플레이해보세요.</span>
             </h2>
             <h3 class="section1__subtitle">간편하게 가입하고, 원하실 때 해지할 수 있어요.</h3>
             <a href="/login.html" class="join__button">새로워진 타잉을 만나보세요!</a>
@@ -45,36 +47,35 @@
           <div class="section2__imgbox">
             <div>
               <picture>
-                <source media="(min-width: 1281px)" srcset="/src/image/landing/desktop/image47.png">
-                <source media="(max-width: 1280px)" srcset="/src/image/landing/mobile/image40.png">
+                <source media="(min-width: 1281px)" srcset="src/image/landing/desktop/image47.png">
+                <source media="(max-width: 1280px)" srcset="src/image/landing/mobile/image47.png">
                 <!-- img tag for browsers that do not support picture element -->
-                <img src="/src/image/landing/desktop/image47.png" alt="">
+                <img src="src/image/landing/desktop/image47.png" alt="러브캐쳐">
               </picture>
             </div>
             <div>
               <picture>
-                <source media="(min-width: 1281px)" srcset="/src/image/landing/desktop/image42.png">
-                <source media="(max-width: 1280px)" srcset="/src/image/landing/mobile/image40.png">
+                <source media="(min-width: 1281px)" srcset="src/image/landing/desktop/image42.png">
+                <source media="(max-width: 1280px)" srcset="src/image/landing/mobile/image47.png">
                 <!-- img tag for browsers that do not support picture element -->
-                <img src="/src/image/landing/desktop/image42.png" alt="">
+                <img src="src/image/landing/desktop/image42.png" alt="보물찾기">
               </picture>
             </div>
             <div>
               <picture>
-                <source media="(min-width: 1281px)" srcset="/src/image/landing/desktop/image49_big.png">
-                <source media="(max-width: 1280px)" srcset="/src/image/landing/mobile/image40.png">
+                <source media="(min-width: 1281px)" srcset="src/image/landing/desktop/image49.png">
+                <source media="(max-width: 1280px)" srcset="src/image/landing/mobile/image47.png">
                 <!-- img tag for browsers that do not support picture element -->
-                <img src="/src/image/landing/desktop/image49_big.png" alt="">
+                <img src="src/image/landing/desktop/image49_big.png" alt="푸드 크로니클">
               </picture>
             </div>
-            <div>
+            <!-- <div>
               <picture>
-                <source media="(min-width: 1281px)" srcset="/src/image/landing/desktop/image49_big.png">
-                <source media="(max-width: 1280px)" srcset="/src/image/landing/mobile/image40.png">
-                <!-- img tag for browsers that do not support picture element -->
-                <img src="/src/image/landing/desktop/image49_big.png" alt="">
+                <source media="(min-width: 1281px)" srcset="src/image/landing/desktop/image49_big.png">
+                <source media="(max-width: 1280px)" srcset="src/image/landing/mobile/image40.png">
+                <img src="src/image/landing/desktop/image49_big.png" alt="">
               </picture>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -88,48 +89,48 @@
           <div class="section3__slidebox">
             <div class="slide__row__wrap">
               <div class="slide__row">
-                <figure><img src="/src/image/landing/desktop/shuroop.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/manager.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/letmein.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/youquiz.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/foodcronicle.png" alt="" /></figure>
+                <figure><img src="src/image/landing/desktop/shuroop.png" alt="슈룹" /></figure>
+                <figure><img src="src/image/landing/desktop/manager.png" alt="연예인 매니저로 살아남기" /></figure>
+                <figure><img src="src/image/landing/desktop/letmein.png" alt="렛미인" /></figure>
+                <figure><img src="src/image/landing/desktop/youquiz.png" alt="유퀴즈" /></figure>
+                <figure><img src="src/image/landing/desktop/foodcronicle.png" alt="푸드 크로니클" /></figure>
               </div>
               <div class="slide__row">
-                <figure><img src="/src/image/landing/desktop/shuroop.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/manager.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/letmein.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/youquiz.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/foodcronicle.png" alt="" /></figure>
+                <figure><img src="src/image/landing/desktop/shuroop.png" alt="슈룹" /></figure>
+                <figure><img src="src/image/landing/desktop/manager.png" alt="연예인 매니저로 살아남기" /></figure>
+                <figure><img src="src/image/landing/desktop/letmein.png" alt="렛미인" /></figure>
+                <figure><img src="src/image/landing/desktop/youquiz.png" alt="유퀴즈" /></figure>
+                <figure><img src="src/image/landing/desktop/foodcronicle.png" alt="푸드 크로니클" /></figure>
               </div>
               <div class="slide__row">
-                <figure><img src="/src/image/landing/desktop/shuroop.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/manager.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/letmein.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/youquiz.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/foodcronicle.png" alt="" /></figure>
+                <figure><img src="src/image/landing/desktop/shuroop.png" alt="슈룹" /></figure>
+                <figure><img src="src/image/landing/desktop/manager.png" alt="연예인 매니저로 살아남기" /></figure>
+                <figure><img src="src/image/landing/desktop/letmein.png" alt="렛미인" /></figure>
+                <figure><img src="src/image/landing/desktop/youquiz.png" alt="유퀴즈" /></figure>
+                <figure><img src="src/image/landing/desktop/foodcronicle.png" alt="푸드 크로니클" /></figure>
               </div>
             </div>
             <div class="slide__row__wrap">
               <div class="slide__row">
-                <figure><img src="/src/image/landing/desktop/foodcronicle.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/youquiz.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/letmein.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/manager.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/shuroop.png" alt="" /></figure>
+                <figure><img src="src/image/landing/desktop/foodcronicle.png" alt="푸드 크로니클" /></figure>
+                <figure><img src="src/image/landing/desktop/youquiz.png" alt="유퀴즈" /></figure>
+                <figure><img src="src/image/landing/desktop/letmein.png" alt="렛미인" /></figure>
+                <figure><img src="src/image/landing/desktop/manager.png" alt="연예인 매니저로 살아남기" /></figure>
+                <figure><img src="src/image/landing/desktop/shuroop.png" alt="슈룹" /></figure>
               </div>
               <div class="slide__row">
-                <figure><img src="/src/image/landing/desktop/foodcronicle.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/youquiz.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/letmein.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/manager.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/shuroop.png" alt="" /></figure>
+                <figure><img src="src/image/landing/desktop/foodcronicle.png" alt="푸드 크로니클" /></figure>
+                <figure><img src="src/image/landing/desktop/youquiz.png" alt="유퀴즈" /></figure>
+                <figure><img src="src/image/landing/desktop/letmein.png" alt="렛미인" /></figure>
+                <figure><img src="src/image/landing/desktop/manager.png" alt="연예인 매니저로 살아남기" /></figure>
+                <figure><img src="src/image/landing/desktop/shuroop.png" alt="슈룹" /></figure>
               </div>
               <div class="slide__row">
-                <figure><img src="/src/image/landing/desktop/foodcronicle.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/youquiz.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/letmein.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/manager.png" alt="" /></figure>
-                <figure><img src="/src/image/landing/desktop/shuroop.png" alt="" /></figure>
+                <figure><img src="src/image/landing/desktop/foodcronicle.png" alt="푸드 크로니클" /></figure>
+                <figure><img src="src/image/landing/desktop/youquiz.png" alt="유퀴즈" /></figure>
+                <figure><img src="src/image/landing/desktop/letmein.png" alt="렛미인" /></figure>
+                <figure><img src="src/image/landing/desktop/manager.png" alt="연예인 매니저로 살아남기" /></figure>
+                <figure><img src="src/image/landing/desktop/shuroop.png" alt="슈룹" /></figure>
               </div>
             </div>
           </div>
@@ -137,8 +138,8 @@
       </section>
       <section class="section4">
         <div class="section4__container">
-          <figure>
-            <img src="/src/image/landing/Logo_2.png" alt="" />
+          <figure class="section4__logo">
+            <img src="src/image/landing/Logo_2.png" alt="" />
           </figure>
           <div class="section4__textbox">
             <h2 class="section4__title">지금 시작해보세요</h2>

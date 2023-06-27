@@ -1,5 +1,13 @@
 @use './../utils' as *;
 
+header {
+  .menu,
+  .searchForm,
+  .userInfo {
+    display: none;
+  }
+}
+
 main {
   
 }
@@ -24,11 +32,18 @@ main {
     overflow: hidden;
   }
   &__imgbox > div {
-    flex-basis: rem(277px);
     flex-shrink: 0;
 
     @include desktop {
-      flex-basis: rem(908px);
+      width: rem(908px);
+    }
+
+    @include tablet {
+      width: rem(462px);
+    }
+
+    @include mobile {
+      width: rem(665px);
     }
   }
 }
@@ -59,7 +74,13 @@ main {
     }
   }
 }
-.section4 {}
+.section4 {
+  &__logo {
+    @include autoMargin;
+    width: rem(279px);
+    margin-bottom: rem(36px);
+  }
+}
 
 
 /* 섹션 공통 */
@@ -80,6 +101,10 @@ main [class*="__title"] {
   font-size: rem(50px);
   font-weight: 700;
   line-height: 1.4;
+
+  span {
+    display: block;
+  }
 }
 
 main [class*="__subtitle"] {
@@ -98,6 +123,7 @@ main [class*="__summary"] {
 
 .join__button {
   //@include flexbox($items: center);
+  @include autoMargin;
   display: block;
   width: rem(506px);
   font-size: rem(28px);
@@ -113,20 +139,20 @@ main [class*="__summary"] {
 @include tablet {
   /* 섹션 공통 */
   main [class*="__title"] {
-    font-size: rem(22px);
+    font-size: rem(37px);
   }
 
   main [class*="__subtitle"] {
-    font-size: rem(16px);
+    font-size: rem(20px);
   }
 
   main [class*="__summary"] {
-    font-size: rem(12px);
+    font-size: rem(20px);
   }
 
   .join__button {
-    width: rem(283px);
-    font-size: rem(16px);
+    width: rem(472px);
+    font-size: rem(27px);
     background: $red_landing url("/src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
     padding: rem(19px);
     margin-top: rem(60px);
@@ -157,6 +183,12 @@ main [class*="__summary"] {
     font-size: rem(29px);
   }
 
+  .section3 {
+    [class*="__summary"] {
+      display: none;
+    }
+  }
+
   .join__button {
     width: rem(451px);
     font-size: rem(29px);
@@ -165,6 +197,7 @@ main [class*="__summary"] {
     margin-top: rem(60px);
   }
 }
+
 
 @keyframes slidein {
   from {

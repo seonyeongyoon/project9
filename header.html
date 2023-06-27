@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TAING</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
-    <link rel="stylesheet" href="./src/style/index.css" />
-    <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
-  </head>
-  <body>
-    <header class="header">
-      <hl class="logo">
+    <header id-="scrollHeader" class="header">
+      <h1 class="logo">
         <a href="/" class="logo__link" aria-label="TAING"></a>
-      </hl>
+      </h1>
       <!-- //logo -->
       <nav class="menu">
         <h2 class="a11yHidden">메인 메뉴</h2>
         <ul class="menu__list">
-          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><img class="icon" src="/src/image/header/Live.svg"/>실시간</a></li>
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><span class="icon"><img src="/src/image/header/Live.svg"/></span>실시간</a></li>
           <li class="menu__item"><a href="/" class="menu__link" tabindex="-1">TV프로그램</a></li>
           <li class="menu__item"><a href="/" class="menu__link" tabindex="-1">영화</a></li>
-          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><img class="icon" src="/src/image/header/Paramount.svg"/><span class="a11yHidden">paramount+</span></a></li>
+          <li class="menu__item"><a href="/" class="menu__link" tabindex="-1"><span class="icon"><img class="icon" src="/src/image/header/Paramount.svg"/></span><span class="a11yHidden">paramount+</span></a></li>
         </ul>
       </nav>
       <!-- //navigation -->
@@ -71,5 +48,3 @@
       </div>
       <!-- //userInfo -->
     </header>
-  </body>
-</html>
