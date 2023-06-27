@@ -21,17 +21,17 @@
     <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
   </head>
   <body>
-    <main>
+    <main class="join_page">
       <section class="join">
         <div class="content_wrap">
           <div class="title_wrap">
-            <h3 class="title_name">
+            <h3>
               티빙 회원가입
               <p>아이디와 이메일로 간편하게 티빙을 시작하세요!</p>
             </h3>
           </div>
         </div>
-        <form id="infoForm">
+        <div class="info_wrap">
           <div class="make_id">
             <label for="userId" class="data_input layout_flex">
               <input type="text" id="userId" class="new_id" required placeholder="아이디"/>
@@ -54,7 +54,7 @@
               <input type="text" id="email" class="new_email" required placeholder="이메일" />
            </label>
           </div>
-        </form>
+        </div>
         <ul class="check_wrap">
           <li class="check_list">
             <input type="checkbox" id="agreeAll" />
