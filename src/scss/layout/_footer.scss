@@ -95,4 +95,12 @@
     background-position: 0 -50px;
   }
 
+  @include tablet {
+    font-size: rem(20px);
+
+    &__link {
+      font-size: rem(20px);
+    }
+  }
+
 }

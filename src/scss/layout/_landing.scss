@@ -24,11 +24,18 @@ main {
     overflow: hidden;
   }
   &__imgbox > div {
-    flex-basis: rem(277px);
     flex-shrink: 0;
 
     @include desktop {
-      flex-basis: rem(908px);
+      width: rem(908px);
+    }
+
+    @include tablet {
+      width: rem(462px);
+    }
+
+    @include mobile {
+      width: rem(665px);
     }
   }
 }
@@ -165,6 +172,7 @@ main [class*="__summary"] {
     margin-top: rem(60px);
   }
 }
+
 
 @keyframes slidein {
   from {
