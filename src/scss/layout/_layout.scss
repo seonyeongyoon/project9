@@ -9,7 +9,111 @@ body {
 
 }
 
-header{
+.modal {
+  // display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+
+  &__box {
+    position: absolute;
+    top: calc(50vh - 100px);
+    left: calc(50vw - 250px);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 10px;
+    width: 500px;
+    height: 200px;
+
+    &__text {
+
+      margin-top: rem(15px);
+      &__text1,
+      &__text2 {
+        cursor: pointer;
+      }
+
+      &__text1::after {
+        display: inline-block;
+        content: '';
+        width: rem(1px);
+        height: rem(15px);
+        background-color: $gray5;
+        margin-left: rem(80px);
+        margin-right: rem(80px);
+        // margin-bottom: rem(1px);
+        vertical-align: -.2rem;
+      }
+    }
+
+    @include tablet {
+      width: 400px;
+      height: 330px;
+      top: calc(50vh - 165px);
+      left: calc(50vw - 200px);
+
+      &__text {
+        font-size: 13px;
+        margin-top: rem(10px);
+        &__text1::after {
+          display: inline-block;
+          content: '';
+          width: rem(1px);
+          height: rem(15px);
+          background-color: $gray5;
+          margin-left: rem(60px);
+          margin-right: rem(60px);
+          // margin-bottom: rem(1px);
+          vertical-align: -.2rem;
+        }
+      }
+    }
+
+    @include mobile {
+      width: 300px;
+      height: 250px;
+      top: calc(50vh - 125px);
+      left: calc(50vw - 150px);
+
+      &__text {
+        font-size: 11px;
+        margin-top: rem(5px);
+        &__text1::after {
+          display: inline-block;
+          content: '';
+          width: 1px;
+          height: rem(15px);
+          background-color: $gray5;
+          margin-left: rem(40px);
+          margin-right: rem(40px);
+          // margin-bottom: rem(1px);
+          vertical-align: -.2rem;
+        }
+      }
+
+    }
+
+    
+
+
+
+
+
+  }
+}
+
+
+
+
+header {
   transition: background-color 0.6s ease-in-out;
 }
 
@@ -124,7 +228,7 @@ header{
     height: 100%;
     margin: rem(50px) rem(50px) rem(50px) 0;
 
-    
+
     &__title {
       margin-bottom: rem(20px);
       font-size: rem(20px);
@@ -157,11 +261,11 @@ header{
 
     .favorite--box--width {
       width: 108%;
-    
+
       @include tablet {
         width: 145%;
       }
-    
+
       @include mobile {
         width: 250%;
       }
@@ -170,11 +274,11 @@ header{
 
     .live--box--width {
       width: 114%;
-    
+
       @include tablet {
         width: 180%;
       }
-    
+
       @include mobile {
         width: 280%;
       }
@@ -183,21 +287,21 @@ header{
 
     .only--img--width {
       width: 110%;
-    
+
       @include tablet {
         width: 160%;
       }
-    
+
       @include mobile {
         width: 320%;
       }
     }
 
-    
+
 
     .event--box--width {
       width: 170%;
-    
+
       @include mobile {
         width: 280%;
       }
@@ -212,12 +316,14 @@ header{
       &__contentbox {
         padding-right: rem(13px);
         width: 13%;
-        transition: transform 0.5s ease-in-out ;
+        transition: transform 0.5s ease-in-out;
       }
-      &__contentbox:hover{
+
+      &__contentbox:hover {
         transform: translateY(-15px);
-        
+
       }
+
       // &__contentbox:
 
       &__contentbox img {
@@ -237,83 +343,95 @@ header{
         @include tablet {
           width: 20%;
         }
-        &__text{
+
+        &__text {
           line-height: rem(30px);
           color: gray;
         }
-        transition: transform 0.5s ease-in-out ;
+
+        transition: transform 0.5s ease-in-out;
       }
-      &__vodbox:hover{
+
+      &__vodbox:hover {
         transform: translateY(-15px);
       }
-      &__vodbox img{
+
+      &__vodbox img {
         width: 100%;
       }
-      &__vodbox figcaption{
+
+      &__vodbox figcaption {
         margin-top: rem(10px);
       }
 
 
-      &__favoritebox{
+      &__favoritebox {
         position: relative;
         margin-bottom: rem(25px);
         padding-right: rem(13px);
         width: 15%;
 
-        &__number{
+        &__number {
           @include pos($t: 88%);
           font-family: 'Noto Sans KR', sans-serif;
           font-style: italic;
           font-size: rem(70px);
           font-weight: bold;
         }
-        &__text{
+
+        &__text {
           @include pos($t: 102%, $l : 30%);
           color: $gray2;
         }
-        transition: transform 0.5s ease-in-out ;
+
+        transition: transform 0.5s ease-in-out;
       }
-      &__favoritebox:hover{
+
+      &__favoritebox:hover {
         transform: translateY(-15px);
       }
-      &__favoritebox img{
+
+      &__favoritebox img {
         width: 100%;
       }
 
-      &__livebox{
+      &__livebox {
         padding-right: rem(13px);
         width: 17%;
         position: relative;
         margin-bottom: 50px;
-        img{
+
+        img {
           width: 100%;
         }
-        transition: transform 0.5s ease-in-out ;
-        &__mainbox{
+
+        transition: transform 0.5s ease-in-out;
+
+        &__mainbox {
           display: flex;
           position: absolute;
           top: 96%;
           margin-top: rem(5px);
-        
-          &__textbox{
+
+          &__textbox {
             line-height: rem(25px);
             margin-top: rem(9px);
             padding-left: rem(20px);
 
-            h5{
+            h5 {}
 
-            }
-            h6{
+            h6 {
               font-weight: 300;
               color: $gray3;
               font-size: rem(15px);
             }
-            
-            span{
+
+            span {
               color: $gray5;
             }
           }
-          h4{
+
+          h4 {
             font-family: 'Noto Sans KR', sans-serif;
             font-style: italic;
             font-size: rem(70px);
@@ -321,54 +439,57 @@ header{
           }
         }
       }
-      
-      &__livebox:hover{
+
+      &__livebox:hover {
         transform: translateY(-15px);
       }
-      &__onlyimgbox{
+
+      &__onlyimgbox {
         width: 15%;
         padding-right: rem(13px);
-        img{
+
+        img {
           width: 100%;
         }
-        transition: transform 0.5s ease-in-out ;
+
+        transition: transform 0.5s ease-in-out;
       }
-      &__onlyimgbox:hover{
+
+      &__onlyimgbox:hover {
         transform: translateY(-15px);
       }
 
 
-      &__eventimg{
+      &__eventimg {
         width: 11.1%;
         padding-right: rem(13px);
-      
+
         @include tablet {
           width: 17%;
         }
-      
+
         @include mobile {
           width: 17%;
         }
       }
-    }  //플렉스박스 끝
+    }
+
+    //플렉스박스 끝
   }
 
-  &__bottombox{
+  &__bottombox {
     padding-right: 60px; // section2에서 left 30준것 + 30
-    transition: transform 0.5s ease-in-out ;
-    &__sportsbanner{
+    transition: transform 0.5s ease-in-out;
+
+    &__sportsbanner {
       display: block;
       width: 90%;
       margin: auto;
-      
+
     }
   }
-  &__bottombox:hover{
+
+  &__bottombox:hover {
     transform: translateY(-15px);
   }
 }
-
-
-
-
-

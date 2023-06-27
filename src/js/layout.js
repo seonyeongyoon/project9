@@ -14,7 +14,7 @@ const sliderImage = document.getElementById("sliderImage");
 function showImage(index) {
   sliderImage.style.opacity = 0;
   setTimeout(() => {
-    sliderImage.style.backgroundImage = `linear-gradient(to top , rgba(0,0,0,0.5) 0%,rgba(0,0,0,1) 10%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
+    sliderImage.style.backgroundImage = `linear-gradient(to top , rgba(0,0,0,1) 0%,rgba(0,0,0,0.7) 10%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
     rgba(255,255,255,0) 100%),linear-gradient(to left , rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.5) 5%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
     rgba(255,255,255,0) 100%),linear-gradient(to right , rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.5) 10%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
     rgba(255,255,255,0) 100%), url(${images[index]})`;
@@ -108,6 +108,16 @@ window.addEventListener('scroll', function(){
   else{
     document.getElementById('scrollHeader').style.backgroundColor = 'transparent'
   }
+})
+
+
+//모달 창 닫기
+function exitModal(){
+  document.getElementById('mainModal').style.display = "none";
+}
+
+document.querySelectorAll('.close').forEach((items)=>{
+  items.addEventListener('click',exitModal);
 })
 
 
