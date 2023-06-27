@@ -1,5 +1,9 @@
 @use './../utils' as *;
 
+<<<<<<< HEAD
+.login_page {
+    
+=======
 login_page {
     width: 1920px;
     height: 646px;
@@ -10,14 +14,11 @@ login_page {
     align-items: center;
     align-self: stretch;
     background: #000;
+>>>>>>> develop
 }
 
 .title_wrap {
-    width: 732px;
-    height: 53px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
 }
 
 .title {
@@ -37,7 +38,6 @@ form {
 }
 
 .checks_wrap {
-    width: 732px;
     display: flex;
     flex-direction: column;
     padding: 16px 0 32px 0;
