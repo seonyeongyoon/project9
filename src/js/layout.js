@@ -6,16 +6,18 @@ const images = [
 ];
 
 let currentIndex = 0;
-const text = document.querySelector('.section-text');
-const dots = document.querySelectorAll(".dot");
+const text = document.querySelector('.banner__slider__dot__text');
+const dots = document.querySelectorAll(".banner__slider__dot__button");
 const pauseIcon = document.querySelector('.pause');
 const sliderImage = document.getElementById("sliderImage");
 
 function showImage(index) {
   sliderImage.style.opacity = 0;
   setTimeout(() => {
-    sliderImage.style.backgroundImage = `linear-gradient(to top , rgba(0,0,0,1) 0%,rgba(0,0,0,1) 10%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
-    rgba(255,255,255,0) 100%),url(${images[index]})`;
+    sliderImage.style.backgroundImage = `linear-gradient(to top , rgba(0,0,0,0.5) 0%,rgba(0,0,0,1) 10%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
+    rgba(255,255,255,0) 100%),linear-gradient(to left , rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.5) 5%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
+    rgba(255,255,255,0) 100%),linear-gradient(to right , rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.5) 10%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 40%,
+    rgba(255,255,255,0) 100%), url(${images[index]})`;
     sliderImage.style.opacity = 1;
   }, 500); // 500ms => 0.5 초 뒤 다음 index로 가도록 구현.
   if (index == 1) {
@@ -89,17 +91,29 @@ function dotMove() {
 }
 
 
-
 // 꼼수 ....
 pauseIcon.addEventListener('click', function () {
   pauseIcon.classList.toggle("fa-play");
 })
 
 
+// 스크롤시 header배경색 변경 구현
+const banner = document.getElementById('mainbanner');
+const bannerHeight = banner.getBoundingClientRect().height; 
+
+window.addEventListener('scroll', function(){
+  if( window.scrollY > bannerHeight){
+    document.getElementById('scrollHeader').style.backgroundColor = 'black'
+  }
+  else{
+    document.getElementById('scrollHeader').style.backgroundColor = 'transparent'
+  }
+})
+
 
 
 showImage(currentIndex); // 서버 실행시 첫번째 index 이미지 화면에 랜더링 시켜주기 
-document.querySelector(".prev").addEventListener("click", prevImage);
-document.querySelector(".next").addEventListener("click", nextImage);
+document.querySelector(".banner__slider__prev").addEventListener("click", prevImage);
+document.querySelector(".banner__slider__next").addEventListener("click", nextImage);
 dotMove();
 moveImage();
