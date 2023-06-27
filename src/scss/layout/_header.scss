@@ -116,9 +116,10 @@ header {
           font-weight: 700;
         }
         .profileChange__button {
+          display: block;
           color: $gray3;
           font-size: 1rem;
-          margin-top: rem(5px);
+          margin-top: rem(10px);
         }
       }
     }
