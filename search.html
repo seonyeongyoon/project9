@@ -18,15 +18,15 @@
     />
     <link rel="stylesheet" href="./src/style/index.css" />
     <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
+    <script src="src/js/include.js" defer></script>
   </head>
 
-  <script src="src/js/include.js" defer></script>
   <body class="search__body">
     <div w3-include-html="./header.html"></div>
     <section class="search">
       <h1 class="a11yHidden">검색</h1>
       <form action="" method="POST" class="search__form">
-        <fieldset>
+        <fieldset class="search__fieldset">
           <legend>검색</legend>
           <div class="search__formGroup">
             <div class="search__inputGroup">
@@ -133,7 +133,6 @@
         </div>
       </div>
     </section>
-    <div w3-include-html="./footer.html"></div>
 
     <script>
       const btnClick = document.getElementById("appendText");
