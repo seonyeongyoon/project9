@@ -8,6 +8,14 @@
     .menu, .searchForm, .userInfo {
       display: none;
     }
+
+    header {
+      position: relative;
+    }
+
+    .footer__quick {
+      display: none;
+    }
   }
 
   // 프로필 제목 속성
