@@ -18,8 +18,10 @@
     />
     <link rel="stylesheet" href="./src/style/index.css" />
     <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
+    <script src="src/js/include.js" defer></script>
   </head>
-  <body>
+  <body class="profile__body">
+    <div w3-include-html="./header.html"></div>
     <section class="profile">
       <h1 class="profile__title">프로필 편집</h1>
       <p class="profile__word">편집할 프로필을 선택해주세요.</p>
@@ -109,5 +111,6 @@
         완료
       </button>
     </section>
+    <div w3-include-html="./footer.html"></div>
   </body>
 </html>
