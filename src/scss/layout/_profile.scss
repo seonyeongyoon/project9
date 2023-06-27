@@ -24,13 +24,13 @@
     width: 150px;
   }
   
-  // 프로필 목록에 플렉스 주어 정렬
+  // 프로필 목록에 플렉스 정렬
   &__lists {
     @include flexbox($justify: center);
     column-gap: 30px;
   }
 
-  // 각 프로필에 플렉스 주어 세로 정렬
+  // 각 프로필에 플렉스 세로 정렬
   &__link {
     color: $gray3;
     @include flexbox($direction: column, $items: center);
