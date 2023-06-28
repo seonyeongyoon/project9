@@ -3,11 +3,10 @@
 header {
   @include flexbox($justify: space-between, $items: center);
   gap: rem(52px);
-  /* background: $yellow; */
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   padding: rem(29px) rem(70px);
   z-index: 1;
   background-image: linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0));
