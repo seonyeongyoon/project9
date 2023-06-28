@@ -613,8 +613,8 @@ button {
   justify-content: space-between;
   align-items: stretch;
   color: #C4C4C4;
-  border-top: 1px solid #2B2B2B;
-  padding-top: 1rem;
+  border-bottom: 1px solid #2B2B2B;
+  padding-bottom: 1rem;
 }
 .footer__quick .notice strong {
   color: #6B6B6B;
@@ -702,10 +702,11 @@ button {
 }
 @media (max-width: 767px) {
   .footer {
-    font-size: 1.8125rem;
-    padding: 7.8125rem 2.375rem 12.3125rem;
+    font-size: 1rem;
+    padding: 3.25rem 1rem 5.125rem;
   }
   .footer__list {
+    font-size: 1rem;
     flex-direction: column;
     gap: 0.25rem;
   }
@@ -721,6 +722,10 @@ button {
     left: initial;
     top: 0;
     left: 0;
+  }
+  .footer__sns__link {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -1611,6 +1616,7 @@ body {
 }
 
 .modal {
+  display: none;
   width: 100%;
   position: fixed;
   top: 0;
