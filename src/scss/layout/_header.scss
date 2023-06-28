@@ -3,10 +3,11 @@
 header {
   @include flexbox($justify: space-between, $items: center);
   gap: rem(52px);
+  /* background: $yellow; */
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   padding: rem(29px) rem(70px);
   z-index: 1;
   background-image: linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,0));
@@ -23,7 +24,7 @@ header {
     }
 
     @include mobile {
-      width: rem(110px);
+      width: rem(80px);
     }
   }
 
@@ -71,6 +72,22 @@ header {
       opacity: 0.7;
       -webkit-transition: opacity 0.1s;
       transition: opacity 0.1s;
+
+      &:hover {
+        background: url("./../image/header/Search_hover.svg") center / 100% no-repeat;
+      }
+    }
+
+    @include mobile {
+      &__button {
+        width: rem(30px);
+        height: rem(30px);
+        background: url("./../image/header/Search_mo.svg") center / 100% no-repeat;
+
+        &:hover {
+          background: url("./../image/header/Search_mo_hover.svg") center / 100% no-repeat;
+        }
+      }
     }
   }
 
@@ -150,6 +167,13 @@ header {
         background: $gray7;
       }
     }
+
+    @include mobile {
+      &__button {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
   }
 
 
@@ -160,6 +184,10 @@ header {
         gap: 1rem;
       }
     }
+  }
+
+  @include mobile {
+    padding: rem(10px) rem(30px);
   }
 }
 
