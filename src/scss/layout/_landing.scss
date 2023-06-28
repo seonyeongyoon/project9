@@ -13,7 +13,7 @@ main {
 }
 
 .section1 {
-  background: #000 url(/src/image/landing/backgorund-1.png) no-repeat center / cover;
+  background: #000 url("./src/image/landing/backgorund-1.png") no-repeat center / cover;
 
   &__textbox {
     //max-width: rem(545px);
@@ -129,7 +129,7 @@ main [class*="__summary"] {
   font-size: rem(28px);
   font-weight: 600;
   line-height: 1.5;
-  background: $red_landing url("/src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
+  background: $red_landing url("./src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
   border-radius: rem(4px);
   text-align: center;
   padding: rem(19px);
@@ -153,7 +153,7 @@ main [class*="__summary"] {
   .join__button {
     width: rem(472px);
     font-size: rem(27px);
-    background: $red_landing url("/src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
+    background: $red_landing url("./src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
     padding: rem(19px);
     margin-top: rem(60px);
   }
@@ -192,7 +192,7 @@ main [class*="__summary"] {
   .join__button {
     width: rem(451px);
     font-size: rem(29px);
-    background: $red_landing url("/src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
+    background: $red_landing url("./src/image/landing/Simbol.svg") no-repeat rem(8px) top / auto;
     padding: rem(19px);
     margin-top: rem(60px);
   }
