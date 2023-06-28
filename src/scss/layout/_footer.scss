@@ -48,11 +48,6 @@
     @include flexbox();
     gap: rem(36px);
     color: $gray2;
-
-    @include mobile {
-      flex-direction: column;
-      gap: rem(4px)
-    }
   }
 
   &__link {
@@ -96,12 +91,34 @@
     background-position: 0 -50px;
   }
 
-  @include tablet {
-    font-size: rem(20px);
 
-    &__link {
-      font-size: rem(20px);
+  @include tablet {
+    padding: 6.75rem 2.25rem 8.625rem;
+
+    &__list {
+      gap: rem(20px);
     }
   }
 
+  @include mobile {
+    font-size: rem(29px);
+    padding: rem(125px) rem(38px) rem(197px);
+
+    &__list {
+      flex-direction: column;
+      gap: rem(4px);
+    }
+
+    &__quick {
+      .notice {
+        position: relative;
+        padding-left: rem(120px);
+      }
+      .notice strong {
+        @include pos;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
 }
