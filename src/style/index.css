@@ -449,7 +449,7 @@ header .logo {
 header .logo__link {
   display: block;
   height: 100%;
-  background: url(./src/image/header/Logo_1.svg) no-repeat;
+  background: url("./../image/header/Logo_1.svg") no-repeat;
 }
 header .menu__list {
   display: flex;
@@ -490,7 +490,7 @@ header .searchForm__button {
   display: block;
   width: 2.333rem;
   height: 2.333rem;
-  background: url(./src/image/header/Search.svg) center/100% no-repeat;
+  background: url("./../image/header/Search.svg") center/100% no-repeat;
   opacity: 0.7;
   -webkit-transition: opacity 0.1s;
   transition: opacity 0.1s;
@@ -506,7 +506,7 @@ header .userInfo:hover .userInfo__content {
 header .userInfo__button {
   width: 2.333rem;
   height: 2.333rem;
-  background: url(./src/image/header/Profile.svg) center/100% no-repeat;
+  background: url("./../image/header/Profile.svg") center/100% no-repeat;
 }
 header .userInfo__content {
   position: absolute;
@@ -646,12 +646,6 @@ button {
   gap: 2.25rem;
   color: #C4C4C4;
 }
-@media (max-width: 767px) {
-  .footer__list {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-}
 .footer__link {
   display: block;
 }
@@ -695,10 +689,33 @@ button {
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .footer {
-    font-size: 1.25rem;
+    padding: 6.75rem 2.25rem 8.625rem;
   }
-  .footer__link {
-    font-size: 1.25rem;
+  .footer__list {
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    font-size: 1.8125rem;
+    padding: 7.8125rem 2.375rem 12.3125rem;
+  }
+  .footer__list {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .footer__quick .notice {
+    position: relative;
+    padding-left: 7.5rem;
+  }
+  .footer__quick .notice strong {
+    position: absolute;
+    top: initial;
+    right: initial;
+    bottom: initial;
+    left: initial;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -770,7 +787,7 @@ button {
 
 .btn_check_2 {
   color: #000;
-  background-color: #fff;
+  background-color: #E1E1E1;
   display: inline-block;
   width: 100%;
   padding: 15px 0;
@@ -778,14 +795,36 @@ button {
   border-radius: 4px;
 }
 
-.line::before {
-  content: "";
+.line_border {
+  display: flex;
 }
 
-.line::after {
-  content: "";
+hr {
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: #2B2B2B;
 }
 
+.line_or {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  color: #2B2B2B;
+}
+
+/* 모바일 미디어쿼리 */
+@media (max-width: 767px) {
+  .find_id_page {
+    width: 95%;
+  }
+}
+/* 태블릿 미디어쿼리 */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .find_id_page {
+    width: 70%;
+  }
+}
 .find_pw_page {
   width: 40%;
   max-width: 400px;
@@ -815,6 +854,23 @@ button {
   border-radius: 4px;
 }
 
+.explain_part p {
+  line-height: 1.5;
+  color: #898989;
+}
+
+/* 모바일 미디어쿼리 */
+@media (max-width: 767px) {
+  .find_pw_page {
+    width: 95%;
+  }
+}
+/* 태블릿 미디어쿼리 */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .find_pw_page {
+    width: 70%;
+  }
+}
 .join_page {
   width: 40%;
   max-width: 400px;
@@ -857,10 +913,18 @@ button {
   margin-bottom: 10px;
 }
 
+.data_input_check, .data_input_pw {
+  position: relative;
+}
+
 #closePwCheck {
   width: 25px;
   height: 25px;
-  background: url(./../image/login/Device=Desktop\,\ Name=Pw.png) no-repeat center;
+  background: url(./../image/login/DesktopPw.png) no-repeat center;
+  position: absolute;
+  background-size: 25px;
+  right: 10px;
+  bottom: -2px;
 }
 
 .check_wrap {
@@ -871,6 +935,7 @@ button {
   color: #C4C4C4;
 }
 
+/* 체크박스 아이콘 */
 input[type=checkbox] {
   display: none;
 }
@@ -886,13 +951,13 @@ input#agreeAll + label:before {
   width: 17px;
   height: 17px;
   vertical-align: middle;
-  background: url(./../image/login/Device=Desktop\,\ State=Default\,\ Type=Filled.png) no-repeat;
+  background: url(./../image/login/DesktopDFilled.png) no-repeat;
   background-size: 17px;
 }
 
 input#agreeAll:checked + label:before {
   content: "";
-  background: url(./../image/login/Device=Desktop\,\ State=Active\,\ Type=Filled.png) no-repeat;
+  background: url(./../image/login/DesktopAFilled.png) no-repeat;
   background-size: 17px;
 }
 
@@ -906,6 +971,49 @@ input#agreeAll:checked + label:before {
   border-radius: 4px;
 }
 
+input.agree_item + label > span {
+  vertical-align: middle;
+  padding-left: 5px;
+}
+
+/* label:before에 체크하기 전 상태 CSS */
+input.agree_item + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+  background: url(./../image/login/DesktopDNoFilled.png) no-repeat;
+  background-size: 17px;
+}
+
+/* label:before에 체크 된 상태 CSS */
+input.agree_item:checked + label:before {
+  content: "";
+  background: url(./../image/login/DesktopDFilled.png) no-repeat;
+  background-size: 17px;
+}
+
+.check_box {
+  margin-bottom: 15px;
+}
+
+.check_box:nth-child(7), .check_box:nth-child(8) {
+  padding-left: 35px;
+}
+
+/* 모바일 미디어쿼리 */
+@media (max-width: 767px) {
+  .join_page {
+    width: 95%;
+  }
+}
+/* 태블릿 미디어쿼리 */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .join_page {
+    width: 70%;
+  }
+}
 .landing__body header .menu,
 .landing__body header .searchForm,
 .landing__body header .userInfo {
@@ -913,7 +1021,7 @@ input#agreeAll:checked + label:before {
 }
 
 .section1 {
-  background: #000 url("./src/image/landing/backgorund-1.png") no-repeat center/cover;
+  background: #000 url("./../image/landing/backgorund-1.png") no-repeat center/cover;
 }
 .section1__subtitle {
   color: #898989;
@@ -1033,7 +1141,7 @@ main [class*=__summary] {
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.5;
-  background: #E93945 url("./src/image/landing/Simbol.svg") no-repeat 0.5rem top/auto;
+  background: #E93945 url("./../image/landing/Simbol.svg") no-repeat 0.5rem top/auto;
   border-radius: 0.25rem;
   text-align: center;
   padding: 1.1875rem;
@@ -1054,7 +1162,6 @@ main [class*=__summary] {
   .join__button {
     width: 29.5rem;
     font-size: 1.6875rem;
-    background: #E93945 url("./src/image/landing/Simbol.svg") no-repeat 0.5rem top/auto;
     padding: 1.1875rem;
     margin-top: 3.75rem;
   }
@@ -1084,7 +1191,6 @@ main [class*=__summary] {
   .join__button {
     width: 28.1875rem;
     font-size: 1.8125rem;
-    background: #E93945 url("./src/image/landing/Simbol.svg") no-repeat 0.5rem top/auto;
     padding: 1.1875rem;
     margin-top: 3.75rem;
   }
@@ -1133,7 +1239,7 @@ main [class*=__summary] {
 #closePW {
   width: 25px;
   height: 25px;
-  background: url(./../image/login/Device=Desktop\,\ Name=Pw.png) no-repeat center;
+  background: url(./../image/login/DesktopPw.png) no-repeat center;
   position: absolute;
   right: 10px;
   bottom: 15px;
@@ -1191,17 +1297,29 @@ input#check + label:before {
   width: 17px;
   height: 17px;
   vertical-align: middle;
-  background: url(./../image/login/Device=Desktop\,\ State=Default\,\ Type=Filled.png) no-repeat;
+  background: url(./../image/login/DesktopDFilled.png) no-repeat;
   background-size: 17px;
 }
 
 /* label:before에 체크 된 상태 CSS */
 input#check:checked + label:before {
   content: "";
-  background: url(./../image/login/Device=Desktop\,\ State=Active\,\ Type=Filled.png) no-repeat;
+  background: url(./../image/login/DesktopAFilled.png) no-repeat;
   background-size: 17px;
 }
 
+/* 모바일 미디어쿼리 */
+@media (max-width: 767px) {
+  .login {
+    width: 95%;
+  }
+}
+/* 태블릿 미디어쿼리 */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .login {
+    width: 70%;
+  }
+}
 .logout {
   width: 100%;
   display: flex;
@@ -1500,14 +1618,14 @@ body {
 .modal__box {
   position: absolute;
   top: calc(50vh - 100px);
-  left: calc(50vw - 250px);
+  left: calc(50vw - 200px);
   background-color: white;
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
   align-items: center;
   border-radius: 10px;
-  width: 500px;
+  width: 400px;
   height: 200px;
 }
 .modal__box__text {
@@ -1516,36 +1634,30 @@ body {
 .modal__box__text__text1, .modal__box__text__text2 {
   cursor: pointer;
 }
-.modal__box__text__text1::after {
+.modal__box__text__line {
   display: inline-block;
-  content: "";
-  width: 0.0625rem;
-  height: 0.9375rem;
-  background-color: #6B6B6B;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  vertical-align: -0.2rem;
+  width: 1px;
+  height: 15px;
+  background-color: gray;
+  margin: 0 3.125rem;
 }
 @media (min-width: 768px) and (max-width: 1279px) {
   .modal__box {
-    width: 400px;
+    width: 350px;
     height: 330px;
     top: calc(50vh - 165px);
-    left: calc(50vw - 200px);
+    left: calc(50vw - 175px);
   }
   .modal__box__text {
     font-size: 13px;
     margin-top: 0.625rem;
   }
-  .modal__box__text__text1::after {
+  .modal__box__text__line {
     display: inline-block;
-    content: "";
-    width: 0.0625rem;
-    height: 0.9375rem;
-    background-color: #6B6B6B;
-    margin-left: 3.75rem;
-    margin-right: 3.75rem;
-    vertical-align: -0.2rem;
+    width: 1px;
+    height: 15px;
+    background-color: gray;
+    margin: 0 2.8125rem;
   }
 }
 @media (max-width: 767px) {
@@ -1559,15 +1671,12 @@ body {
     font-size: 11px;
     margin-top: 0.3125rem;
   }
-  .modal__box__text__text1::after {
+  .modal__box__text__line {
     display: inline-block;
-    content: "";
     width: 1px;
-    height: 0.9375rem;
-    background-color: #6B6B6B;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-    vertical-align: -0.2rem;
+    height: 15px;
+    background-color: gray;
+    margin: 0 2.5rem;
   }
 }
 
@@ -1584,8 +1693,6 @@ header {
 .banner__slider {
   position: relative;
   width: 100%;
-  /* height: 0;  aspect-ratio 와 마찬가지로 비율 정하는 방법 
-  padding-bottom: 50%; 가로 너비 비율 지정해주기 */
   aspect-ratio: 15/7;
   overflow: hidden;
 }
@@ -1597,7 +1704,6 @@ header {
   height: 100%;
   opacity: 0;
   background-size: cover;
-  /* background-position: center; */
   transition: opacity 0.5s ease-in-out;
   /* opacity 속성 사용시 0.5 초의 지연시간을 줌.*/
 }
