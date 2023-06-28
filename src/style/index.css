@@ -1612,6 +1612,7 @@ body {
   background-color: black;
   padding: 0;
   margin: 0;
+  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -1790,7 +1791,7 @@ header {
   height: 100%;
   margin: 3.125rem 3.125rem 3.125rem 0;
 }
-.recommend__imgbox__title {
+.recommend__imgbox .main__title {
   margin-bottom: 1.25rem;
   font-size: 1.25rem;
   font-weight: bold;
