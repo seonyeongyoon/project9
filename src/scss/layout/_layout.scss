@@ -5,6 +5,7 @@ body {
   background-color: black;
   padding: 0;
   margin: 0;
+  width: 100vw;
   overflow-x: hidden; //가로 스크롤바 숨기기
 
 }
@@ -219,7 +220,7 @@ header {     // header 에서 배경색 변할때 애니메이션 주기
     margin: rem(50px) rem(50px) rem(50px) 0;
 
 
-    &__title {
+    .main__title {
       margin-bottom: rem(20px);
       font-size: rem(20px);
       font-weight: bold;
