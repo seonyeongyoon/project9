@@ -23,10 +23,10 @@
 박정은, 박지함, 윤선영, 이동호 (가나다 순)
 
 ### 담당 페이지
-**박정은** : 로그인, 회원 가입, 아이디 찾기, 비밀번호 찾기,  
-**박지함** : 메인 페이지, 메인 페이지 모달,  
-**윤선영** : 랜딩 페이지, 헤더, 푸터,  
-**이동호** : 프로필 선택, 프로필 편집, 검색 페이지, 로그아웃
+**박정은** : [로그인][], [회원 가입][], [아이디 찾기][], [비밀번호 찾기][],  
+**박지함** : [메인 페이지][], 메인 페이지 모달,  
+**윤선영** : [랜딩 페이지][], 헤더, 푸터,  
+**이동호** : [프로필 선택][], [프로필 편집][], [검색 페이지][], [로그아웃][]
 
 ## 기술 스택
   <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"><img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"><img alt="SASS" src ="https://img.shields.io/badge/SASS-cc6699.svg?&style=for-the-badge&logo=sass&logoColor=white"/><img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">  
@@ -48,7 +48,7 @@
 
 [TAING 반응형 웹페이지]: https://rustandbone.github.io/project9/
 [메인 페이지]: https://rustandbone.github.io/project9/index.html
-[랜딩 페이지]: https://rustandbone.github.io/project9/index.html
+[랜딩 페이지]: https://rustandbone.github.io/project9/landing.html
 [로그인]: https://rustandbone.github.io/project9/login.html
 [로그아웃]: https://rustandbone.github.io/project9/logout.html
 [회원 가입]: https://rustandbone.github.io/project9/join.html
