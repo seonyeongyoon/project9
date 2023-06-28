@@ -76,15 +76,6 @@
     border-radius: 4px;
 }
 
-/* .line::before {
-    content: "-";
-    
-}
-
-.line::after {
-    content: "";
-} */
-
 .line_border {
     display: flex;
 }
@@ -103,12 +94,14 @@ hr {
     color: $gray8;
 }
 
+/* 모바일 미디어쿼리 */
 @include mobile {
     .find_id_page {
         width: 95%;
     }
 }
 
+/* 태블릿 미디어쿼리 */
 @include tablet {
     .find_id_page {
         width: 70%;

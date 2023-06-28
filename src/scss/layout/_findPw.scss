@@ -34,12 +34,14 @@
     color: $gray4;
 }
 
+/* 모바일 미디어쿼리 */
 @include mobile {
     .find_pw_page {
         width: 95%;
     }
 }
 
+/* 태블릿 미디어쿼리 */
 @include tablet {
     .find_pw_page {
         width: 70%;
