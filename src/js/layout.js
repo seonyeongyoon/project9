@@ -21,11 +21,11 @@ function showImage(index) {
     sliderImage.style.opacity = 1;
   }, 500); // 500ms => 0.5 초 뒤 다음 index로 가도록 구현.
   if (index == 1) {
-    text.innerHTML = '두번째 텍스트';
+    text.innerHTML = 'camp Zero Base One';
   } else if (index == 2) {
-    text.innerHTML = "세번째 텍스트";
+    text.innerHTML = "댄스가수 유랑단";
   } else if (index == 3) {
-    text.innerHTML = "마지막 텍스트";
+    text.innerHTML = "텐트 밖은 유럽 - 노르웨이편";
   }
   else {
     text.innerHTML = '인생 2회차를 사는 드라마';
