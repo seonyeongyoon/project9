@@ -101,10 +101,11 @@
   }
 
   @include mobile {
-    font-size: rem(29px);
+    font-size: rem(16px);
     padding: rem(125px) rem(38px) rem(197px);
 
     &__list {
+      font-size: rem(16px);
       flex-direction: column;
       gap: rem(4px);
     }
@@ -118,6 +119,13 @@
         @include pos;
         top: 0;
         left: 0;
+      }
+    }
+
+    &__sns {
+      &__link {
+        width: 3rem;
+        height: 3rem;
       }
     }
   }
