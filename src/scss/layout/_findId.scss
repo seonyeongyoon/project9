@@ -75,3 +75,11 @@
     margin: 20px 0 40px;
     border-radius: 4px;
 }
+
+.line::before {
+    content: "";
+}
+
+.line::after {
+    content: "";
+}

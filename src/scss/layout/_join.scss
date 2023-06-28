@@ -82,12 +82,6 @@ input#agreeAll:checked + label:before {
     background-size: 17px;
 }
 
-.agree_item::before {
-}
-
-
-
-
 
 
 .regist_btn {
@@ -98,8 +92,4 @@ input#agreeAll:checked + label:before {
     padding: 15px 0;
     margin: 10px 0 40px;
     border-radius: 4px;
-}
-
-@media  {
-    
 }
