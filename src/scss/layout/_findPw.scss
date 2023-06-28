@@ -28,3 +28,20 @@
     margin: 20px 0 40px;
     border-radius: 4px;
 }
+
+.explain_part p {
+    line-height: 1.5;
+    color: $gray4;
+}
+
+@include mobile {
+    .find_pw_page {
+        width: 95%;
+    }
+}
+
+@include tablet {
+    .find_pw_page {
+        width: 70%;
+    }
+}
