@@ -8,16 +8,8 @@
   }
 }
 
-main {
-  
-}
-
 .section1 {
   background: #000 url("./../image/landing/backgorund-1.png") no-repeat center / cover;
-
-  &__textbox {
-    //max-width: rem(545px);
-  }
 
   &__subtitle {
     color: $gray4;
