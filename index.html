@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko-KR">
 
@@ -9,7 +8,7 @@
   <title>TAING - 메인</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <link rel="stylesheet" as="style" crossorigin
+  <link rel="stylesheet"  crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="./src/style/index.css" />
   <link rel="icon" href="./src/image/main/tiving.ico" type="image/x-icon" />
@@ -18,18 +17,28 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;700&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
     rel="stylesheet">
-    <script src="src/js/include.js" defer></script>
+  <script src="src/js/include.js" defer></script>
 
 </head>
 
 <body>
+
+  <!-- 모달 -->
   <div id="mainModal" class="modal">
     <div class="modal__box">
       <a href="#"><img src="./src/image/modal/F_webp,620 3.png" alt="" /></a>
-      <div class="modal__box__text"><span class="modal__box__text__text1 close">오늘 하루 보지 않기</span><span class="modal__box__text__text2 close">닫기</span></div>
+      <div class="modal__box__text">
+        <span class="modal__box__text__text1 no-open">
+          오늘 하루 보지 않기
+        </span>
+        <span class="modal__box__text__line"></span>
+        <span class="modal__box__text__text2 close">
+          닫기
+        </span>
+      </div>
     </div>
-    
-    
+
+
   </div>
   <main>
     <div w3-include-html="./header.html"></div>
@@ -45,10 +54,10 @@
         <button class="banner__slider__next">
           <i class="fa-solid fa-chevron-right fa-xl" style="color: #c3c6d1;"></i>
         </button>
-        <a href="#"  class="banner__slider__details">자세히보기</a>
+        <a href="#" class="banner__slider__details">자세히보기</a>
         <div class="banner__slider__dot">
           <p class="banner__slider__dot__text"></p> <!-- js로 각 슬라이드 텍스트 입력-->
-          <button  class="banner__slider__dot__toggle">
+          <button class="banner__slider__dot__toggle">
             <i id="toggle-start" class="fa-solid fa-pause pause" style="color: #ffffff;"></i>
           </button>
           <button class="banner__slider__dot__button"></button> <!-- css에서 구현-->
@@ -66,7 +75,7 @@
         <h3 class="recommend__imgbox__title">티빙에서 꼭 봐야하는 콘텐츠</h3>
         <div class="recommend__imgbox__flexbox content--box--width">
           <figure class="recommend__imgbox__flexbox__contentbox">
-            <img  src="./src/image/main/desktop/img_frame.png" alt="보물찾기" />
+            <img src="./src/image/main/desktop/img_frame.png" alt="보물찾기" />
             <figcaption>보물찾기</figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__contentbox">
@@ -147,42 +156,50 @@
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-14.png" alt="재벌집 막내아들" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">1</span><span class="recommend__imgbox__flexbox__favoritebox__text">재벌집 막내아들</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">1</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">재벌집 막내아들</span></figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-15.png" alt="술꾼도시여자들" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">2</span><span class="recommend__imgbox__flexbox__favoritebox__text">술꾼도시여자들2</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">2</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">술꾼도시여자들2</span></figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-16.png" alt="환혼" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">3</span><span class="recommend__imgbox__flexbox__favoritebox__text">환혼</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">3</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">환혼</span></figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-17.png" alt="캐나다 체크인" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">4</span><span class="recommend__imgbox__flexbox__favoritebox__text">캐나다 체크인</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">4</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">캐나다 체크인</span></figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-18.png" alt="놀라운 토요일" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">5</span><span class="recommend__imgbox__flexbox__favoritebox__text">놀라운 토요일</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">5</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">놀라운 토요일</span></figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-19.png" alt="쇼미더머니 11" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">6</span><span class="recommend__imgbox__flexbox__favoritebox__text">쇼미더머니11</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">6</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">쇼미더머니11</span></figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-20.png" alt="러브캐처" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">7</span><span class="recommend__imgbox__flexbox__favoritebox__text">러브캐처</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">7</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">러브캐처</span></figcaption>
           </figure>
           <figure class="recommend__imgbox__flexbox__favoritebox"> <!--relative-->
             <img src="./src/image/main/desktop/img_frame-21.png" alt="알쓸인잡" />
             <!-- p 태그  absolution-->
-            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">8</span><span class="recommend__imgbox__flexbox__favoritebox__text">알쓸인잡</span></figcaption>
+            <figcaption><span class="recommend__imgbox__flexbox__favoritebox__number">8</span><span
+                class="recommend__imgbox__flexbox__favoritebox__text">알쓸인잡</span></figcaption>
           </figure>
         </div>
       </div>
@@ -260,25 +277,32 @@
       <div class="recommend__imgbox">
         <h3 class="recommend__imgbox__title">오직 티빙에만 있어요</h3>
         <div class="recommend__imgbox__flexbox only--img--width"> <!-- figure 감싸고 캡션 a11y주기-->
-          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster5.png" alt="전체관람가(영화제목)" />
+          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster5.png"
+              alt="전체관람가(영화제목)" />
             <figcaption class="a11yHidden">전체관람가</figcaption>
           </figure>
-          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster2.png" alt="러브캐처" />
+          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster2.png"
+              alt="러브캐처" />
             <figcaption class="a11yHidden">러브캐처</figcaption>
           </figure>
-          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster7.png" alt="환승연애2" />
+          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster7.png"
+              alt="환승연애2" />
             <figcaption class="a11yHidden">환승연애2</figcaption>
           </figure>
-          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster3.png" alt="몸값" />
+          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster3.png"
+              alt="몸값" />
             <figcaption class="a11yHidden">몸값</figcaption>
           </figure>
-          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster4.png" alt="술꾼도시여자들" />
+          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster4.png"
+              alt="술꾼도시여자들" />
             <figcaption class="a11yHidden">술꾼도시여자들</figcaption>
           </figure>
-          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster1.png" alt="괴이" />
+          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster1.png"
+              alt="괴이" />
             <figcaption class="a11yHidden"> 괴이</figcaption>
           </figure>
-          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster6.png" alt="푸드 크로니클" />
+          <figure class="recommend__imgbox__flexbox__onlyimgbox"><img src="./src/image/main/desktop/poster6.png"
+              alt="푸드 크로니클" />
             <figcaption class="a11yHidden">푸드 크로니클</figcaption>
           </figure>
         </div>
@@ -290,24 +314,30 @@
       <div class="recommend__imgbox">
         <h3 class="recommend__imgbox__title">이벤트</h3>
         <div class="recommend__imgbox__flexbox event--box--width">
-          <div class="recommend__imgbox__flexbox__eventimg">
+          <figure class="recommend__imgbox__flexbox__eventimg">
             <img src="./src/image/main/desktop/img_frame-29.png" alt="신비 아파트 이벤트" />
-          </div>
-          <div class="recommend__imgbox__flexbox__eventimg">
+            <figcaption class="a11yHidden">신비아파트 개봉 이벤트</figcaption>
+          </figure>
+          <figure class="recommend__imgbox__flexbox__eventimg">
             <img src="./src/image/main/desktop/img_frame-30.png" alt="재벌집 막내아들 이벤트" />
-          </div>
-          <div class="recommend__imgbox__flexbox__eventimg">
+            <figcaption class="a11yHidden">재벌집 막내아들 시청이벤트</figcaption>
+          </figure>
+          <figure class="recommend__imgbox__flexbox__eventimg">
             <img src="./src/image/main/desktop/img_frame-31.png" alt="환승연애2 이벤트" />
-          </div>
-          <div class="recommend__imgbox__flexbox__eventimg">
+            <figcaption class="a11yHidden"> 환승연애2 시청이벤트</figcaption>
+          </figure>
+          <figure class="recommend__imgbox__flexbox__eventimg">
             <img src="./src/image/main/desktop/img_frame-32.png" alt="슈룹 이벤트" />
-          </div>
-          <div class="recommend__imgbox__flexbox__eventimg">
+            <figcaption class="a11yHidden">슈룹 시청이벤트</figcaption>
+          </figure>
+          <figure class="recommend__imgbox__flexbox__eventimg">
             <img src="./src/image/main/desktop/img_frame-33.png" alt="디저트 메이커" />
-          </div>
-          <div class="recommend__imgbox__flexbox__eventimg">
+            <figcaption class="a11yHidden">디저트메이커 이벤트</figcaption>
+          </figure>
+          <figure class="recommend__imgbox__flexbox__eventimg">
             <img src="./src/image/main/desktop/img_frame-34.png" alt="렛미인" />
-          </div>
+            <figcaption class="a11yHidden">렛미인 시청이벤트</figcaption>
+          </figure>
         </div>
       </div>
     </section>

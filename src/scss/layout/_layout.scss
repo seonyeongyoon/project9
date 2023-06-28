@@ -9,7 +9,7 @@ body {
 
 }
 
-.modal {
+.modal {     // main 페이지의 modal css
   // display: none;
   width: 100%;
   position: fixed;
@@ -18,19 +18,19 @@ body {
   bottom: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 2;
+  z-index: 2;   //z 인덱스를 높여 화면가장 높이 보이게 만듬.
 
   &__box {
     position: absolute;
-    top: calc(50vh - 100px);
-    left: calc(50vw - 250px);
+    top: calc(50vh - 100px);  // 화면 중앙 배치하기 위해서 
+    left: calc(50vw - 200px); // 동일
     background-color: white;
     display: flex;
     justify-content: center;
-    flex-flow: column nowrap;
+    flex-flow: column nowrap;  // 이미지 , 텍스트를 세로 배치하기 위해서
     align-items: center;
     border-radius: 10px;
-    width: 500px;
+    width: 400px;
     height: 200px;
 
     &__text {
@@ -41,43 +41,35 @@ body {
         cursor: pointer;
       }
 
-      &__text1::after {
+      &__line{
         display: inline-block;
-        content: '';
-        width: rem(1px);
-        height: rem(15px);
-        background-color: $gray5;
-        margin-left: rem(80px);
-        margin-right: rem(80px);
-        // margin-bottom: rem(1px);
-        vertical-align: -.2rem;
+        width: 1px;
+        height: 15px;
+        background-color: gray;
+        margin: 0 rem(50px);
       }
     }
 
-    @include tablet {
-      width: 400px;
+    @include tablet {  //tablet modal 
+      width: 350px;
       height: 330px;
       top: calc(50vh - 165px);
-      left: calc(50vw - 200px);
+      left: calc(50vw - 175px);
 
       &__text {
         font-size: 13px;
         margin-top: rem(10px);
-        &__text1::after {
+        &__line{
           display: inline-block;
-          content: '';
-          width: rem(1px);
-          height: rem(15px);
-          background-color: $gray5;
-          margin-left: rem(60px);
-          margin-right: rem(60px);
-          // margin-bottom: rem(1px);
-          vertical-align: -.2rem;
+          width: 1px;
+          height: 15px;
+          background-color: gray;
+          margin: 0 rem(45px);
         }
       }
     }
 
-    @include mobile {
+    @include mobile {  //mobile modal
       width: 300px;
       height: 250px;
       top: calc(50vh - 125px);
@@ -86,16 +78,12 @@ body {
       &__text {
         font-size: 11px;
         margin-top: rem(5px);
-        &__text1::after {
+        &__line{
           display: inline-block;
-          content: '';
           width: 1px;
-          height: rem(15px);
-          background-color: $gray5;
-          margin-left: rem(40px);
-          margin-right: rem(40px);
-          // margin-bottom: rem(1px);
-          vertical-align: -.2rem;
+          height: 15px;
+          background-color: gray;
+          margin: 0 rem(40px);
         }
       }
 
@@ -113,7 +101,7 @@ body {
 
 
 
-header {
+header {     // header 에서 배경색 변할때 애니메이션 주기
   transition: background-color 0.6s ease-in-out;
 }
 
@@ -128,9 +116,7 @@ header {
   &__slider {
     position: relative;
     width: 100%;
-    /* height: 0;  aspect-ratio 와 마찬가지로 비율 정하는 방법 
-  padding-bottom: 50%; 가로 너비 비율 지정해주기 */
-    aspect-ratio: 15 / 7;
+    aspect-ratio: 15 / 7;   //가로 세로비 조절
     overflow: hidden;
 
     &__img {
@@ -139,9 +125,8 @@ header {
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0;
+      opacity: 0;  //모든 이미지를 안보이게하고, js에서 opacity를 조정해서 슬라이드 되는것처럼 표현
       background-size: cover;
-      /* background-position: center; */
       transition: opacity 0.5s ease-in-out;
       /* opacity 속성 사용시 0.5 초의 지연시간을 줌.*/
     }
@@ -166,7 +151,7 @@ header {
       right: 1%;
     }
 
-    &__details {
+    &__details {  //자세히 보기 버튼
       position: absolute;
       color: white;
       text-decoration: none;
@@ -182,7 +167,7 @@ header {
       border: 1px solid $white;
     }
 
-    &__dot {
+    &__dot {  //정지, 시작버튼 오른쪽 4개 버튼들
       position: absolute;
       color: $white;
       top: 69%;
@@ -240,6 +225,8 @@ header {
       font-weight: bold;
     }
 
+
+    // 각 이미지들을 반응형 이미지로 보이게 하기위해서 이미지를 담고있는 flexbox 에 width 값을 tablet, mobile 다르게 만들었다.
     .content--box--width {
       width: 109%;
 
@@ -329,7 +316,6 @@ header {
 
       }
 
-      // &__contentbox:
 
       &__contentbox img {
         width: 100%;
@@ -486,7 +472,7 @@ header {
     padding-right: 60px; // section2에서 left 30준것 + 30
     transition: transform 0.5s ease-in-out;
 
-    &__sportsbanner {
+    &__sportsbanner {  //스포츠 배너가 좌우 중간에 나오게 margin:auto 
       display: block;
       width: 90%;
       margin: auto;
