@@ -10,8 +10,8 @@
   &__quick {
     @include flexbox($justify: space-between);
     color: $gray2;
-    border-top: 1px solid $gray8;
-    padding-top: 1rem;
+    border-bottom: 1px solid $gray8;
+    padding-bottom: 1rem;
 
     .notice strong {
       color: $gray5;
@@ -102,7 +102,7 @@
 
   @include mobile {
     font-size: rem(16px);
-    padding: rem(125px) rem(38px) rem(197px);
+    padding: rem(52px) rem(16px) rem(82px);
 
     &__list {
       font-size: rem(16px);
