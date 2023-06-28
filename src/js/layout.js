@@ -41,7 +41,7 @@ function moveImage() {  //이미지가 자동 슬라이드 되도록 만들고 �
   // 정지, 실행 아이콘 나오게 하기.
   timer = setInterval(() => {
     nextImage();
-  }, 1000);
+  }, 3000);
 
   sliderImage.addEventListener("mouseover", function () {
     clearInterval(timer);
@@ -49,7 +49,7 @@ function moveImage() {  //이미지가 자동 슬라이드 되도록 만들고 �
   sliderImage.addEventListener("mouseout", function () {
     timer = setInterval(() => {
       nextImage();
-    }, 1000);
+    }, 3000);
   })
   // pauseIcon.addEventListener('click', function () {
   //   if (pauseIcon.classList.contains('fa-pause')) {
