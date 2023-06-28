@@ -68,7 +68,7 @@
 
 .btn_check_2 {
     color: $black;
-    background-color: $white;
+    background-color: $gray1;
     display: inline-block;
     width: 100%;
     padding: 15px 0;
@@ -76,10 +76,41 @@
     border-radius: 4px;
 }
 
-.line::before {
-    content: "";
+/* .line::before {
+    content: "-";
+    
 }
 
 .line::after {
     content: "";
+} */
+
+.line_border {
+    display: flex;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: $gray8;
+}
+
+.line_or {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    color: $gray8;
+}
+
+@include mobile {
+    .find_id_page {
+        width: 95%;
+    }
+}
+
+@include tablet {
+    .find_id_page {
+        width: 70%;
+    }
 }

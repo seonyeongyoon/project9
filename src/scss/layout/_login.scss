@@ -105,6 +105,18 @@ input#check:checked + label:before {
     background-size: 17px;
 }
 
+@include mobile {
+    .login {
+        width: 95%;
+    }
+}
+
+@include tablet {
+    .login {
+        width: 70%;
+    }
+}
+
 // .login_page {
 //     width: 1920px;
 //     height: 646px;

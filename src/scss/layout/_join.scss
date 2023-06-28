@@ -42,11 +42,18 @@
     margin-bottom: 10px;
 }
 
+.data_input_check, .data_input_pw {
+    position: relative;
+}
+
 #closePwCheck {
     width: 25px;
     height: 25px;
     background: url(./../image/login/Device=Desktop\,\ Name=Pw.png) no-repeat center;
-    
+    position: absolute;
+    background-size: 25px;
+    right: 10px;
+    bottom: -2px;
 }
 
 .check_wrap {
@@ -82,8 +89,6 @@ input#agreeAll:checked + label:before {
     background-size: 17px;
 }
 
-
-
 .regist_btn {
     color: $gray3;
     background-color: $gray7;
@@ -92,4 +97,47 @@ input#agreeAll:checked + label:before {
     padding: 15px 0;
     margin: 10px 0 40px;
     border-radius: 4px;
+}
+
+input.agree_item + label > span{
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+/* label:before에 체크하기 전 상태 CSS */
+input.agree_item + label:before{
+    content:"";
+    display:inline-block;
+    width:17px;
+    height:17px;
+    vertical-align:middle;
+    background: url(./../image/login/Device=Desktop\,\ State=Default\,\ Type=No_Filled.png) no-repeat;
+    background-size: 17px;
+}
+
+/* label:before에 체크 된 상태 CSS */  
+input.agree_item:checked + label:before {
+    content:"";
+    background: url(./../image/login/Device=Desktop\,\ State=Default\,\ Type=Filled.png) no-repeat;
+    background-size: 17px;
+}
+
+.check_box {
+    margin-bottom: 15px;
+}
+
+.check_box:nth-child(7), .check_box:nth-child(8) {
+    padding-left: 35px;
+}
+
+@include mobile {
+    .join_page {
+        width: 95%;
+    }
+}
+
+@include tablet {
+    .join_page {
+        width: 70%;
+    }
 }
